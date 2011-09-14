@@ -1,0 +1,16 @@
+List of software used in this project.
+
+- joe editor
+- Komodo IDE
+- Gedit
+- Kate
+
+- Nautilus file manager
+- Gnome desktop
+- KDE desktop
+- ubuntu CLI
+- GIMP image editor
+- LibreOfiice
+- OpenOffice
+
+Develope platform github/ubuntu 11.04
