@@ -1,0 +1,7 @@
+<?php
+/******* configuration file ./config.php *******/
+$server = 'localhost'; // MySql
+$database = ''; // Name of your db
+$password = ''; // The pw for the db
+$prefix = 'shop_'; // Your preffered prefix to separate this shop from other apps using the same db.
+?>

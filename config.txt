@@ -1,0 +1,13 @@
+<?php
+/*		 	configuration file.
+* 			change this file to config.php if it is namned config.txt
+* 			to get a functional shop.
+*			Also remember to delete the txt-version of this file
+*			The shop will not work if the configuration file isn't
+*			properly filled in.
+*/
+$server = 'localhost'; // The place where the shop looks for your database.
+$database = ''; // Name of your db
+$password = ''; // The pw for the db
+$prefix = 'shop_'; // Your preffered prefix to separate this shop from other apps using the same db.
+?>
