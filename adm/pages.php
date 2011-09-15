@@ -4,19 +4,26 @@
 
 error_reporting(E_ALL);
 $title = 'Administer pages'; // To be used for headline tags
+$pagedesc = (isset($_GET['$pagedesc'])) ? (int) $_GET['$pagedesc'] : 2;
 include ('./index.php');
-echo '<h3>Pages</h3>';
-
+?>
+<h3>Pages</h3>
+<p> Here you can move, create, modify and delete pages.</p>
+<ul class="pages">
+<?
 		// the $prefix need {} around it to be read together with pages as it should
         $sql = "SELECT * FROM {$prefix}pages";
         $result = mysql_query($sql);
         while($row=mysql_fetch_object($result))
 		{
-          echo '<li>' . $row->pID . ' ';
+          echo '<li class="pages">' . $row->pID . ' ';
           echo $row->pagename. '</li> ' ;
         }
+
         mysql_free_result($result);
 ?>
+</ul>
+<!-- Create new page -->
 <form method="get" action="pages.php">
 <table>
 <tr>
@@ -32,6 +39,7 @@ echo '<h3>Pages</h3>';
 	<td><input type="submit" name="send">
 	<td><input type="reset">
 </table>
+</form>
 <?php
 $pagename = (isset($_GET['pagename'])) ? $_GET['pagename'] : '';
 $pagename = strip_tags($pagename);
@@ -53,7 +61,6 @@ if ($pagename != '')
                         VALUES ('$pagename', '$headline', '$desk', $prio)";
 	mysql_query($sql);
 }
-
 
 mysql_close($connection);
 

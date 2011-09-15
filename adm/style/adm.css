@@ -1,3 +1,7 @@
 body {
 	background-color: #719A79;
 }
+
+.pages {
+	list-style: none;
+}
