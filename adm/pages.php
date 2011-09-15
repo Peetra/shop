@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 $title = 'Administer pages'; // To be used for headline tags
 include ('./index.php');
 echo '<h3>Pages</h3>';
+
 		// the $prefix need {} around it to be read together with pages as it should
         $sql = "SELECT * FROM {$prefix}pages";
         $result = mysql_query($sql);
