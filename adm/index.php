@@ -1,7 +1,7 @@
 <?php // adm/index.php [Administration Control Panel]
 error_reporting(E_ALL);
-include('../connection.php');
-define('LANG', true);
+include('../connection.php'); // You see the two dots for going up a directory
+define('LANG', true); // The user doesn't get anywhere w/o words in the interface. :P
 if (!empty($_GET['lang']))
 {
 	$lang = $_GET['lang'];
@@ -20,9 +20,8 @@ include('../lang/' . $lang . '.php');
 $title = 'ACP Index';
 include ('./style/header.html');
 
-// I 'll have to solve this somehow, I might want to do a url check for getting the oage check to show up only on index? 
-$pagedesc = (isset($_GET['$pagedesc'])) ? (int) $_GET['$pagedesc'] : 1;
-if ($pagedesc == 1)
-	echo '<p>Welcome to your shop ACP. Use the navigation to personalize your business.
-			<br> Fast actions can be managed from this overview. Good sales!</p>';
+// We welcomes the user, on index, not needed elsewhere
+$who_am_i = $_SERVER['PHP_SELF']; // $_SERVER is a reserved variable in php, very handy
+if (basename($who_am_i, ".php") == 'index') // basename returns the end of a path, here we exclude the fileextension
+	echo '<p>' . $lang['ACP_WELCOME'] . '</p>';
 ?>

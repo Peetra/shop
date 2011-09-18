@@ -14,9 +14,8 @@ if (empty($lang) || !is_array($lang))
 
 // Take $lang and add the language specific elements to get localized content.
 $lang = array_merge($lang, array(
-
 	''		=> '',
-	''		=> '',
+	'ACP_WELCOME'		=> 'Welcome to your shop ACP. Use the navigation to personalize your business.<br>Fast actions can be managed from this overview. Good sales!',
 	''		=> '',
 	''		=> '',
 	''		=> '',

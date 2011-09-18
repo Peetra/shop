@@ -3,16 +3,15 @@
 // $variable = (isset($_GET[''])) ? (int) $_GET[''] : 0;
 
 error_reporting(E_ALL);
-if(!defined('LANG')) { exit; }
-$title = 'Administer pages'; // To be used for headline tags
-$pagedesc = (isset($_GET['$pagedesc'])) ? (int) $_GET['$pagedesc'] : 2;
 include ('./index.php');
+$title = 'Administer pages'; // To be used for headline tags
+
 ?>
 <h3>Pages</h3>
 <p> Here you can move, create, modify and delete pages.</p>
 <ul class="pages">
 <?
-		// the $prefix need {} around it to be read together with pages as it should
+	// the $prefix need {} around it to be read together with pages as it should
         $sql = "SELECT * FROM {$prefix}pages";
         $result = mysql_query($sql);
         while($row=mysql_fetch_object($result))
