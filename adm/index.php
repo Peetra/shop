@@ -1,6 +1,22 @@
 <?php // adm/index.php [Administration Control Panel]
 error_reporting(E_ALL);
 include('../connection.php');
+define('LANG', true);
+if (!empty($_GET['lang']))
+{
+	$lang = $_GET['lang'];
+}
+else if (!empty($_COOKIE['lang']))
+{
+	$lang = $_COOKIE['lang'];
+}
+else
+{
+	$lang = 'en';
+}
+$lang = ($lang == 'fi') ? 'fi' : 'en';
+setcookie('lang', $lang);
+include('../lang/' . $lang . '.php');
 $title = 'ACP Index';
 include ('./style/header.html');
 

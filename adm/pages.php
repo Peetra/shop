@@ -3,6 +3,7 @@
 // $variable = (isset($_GET[''])) ? (int) $_GET[''] : 0;
 
 error_reporting(E_ALL);
+if(!defined('LANG')) { exit; }
 $title = 'Administer pages'; // To be used for headline tags
 $pagedesc = (isset($_GET['$pagedesc'])) ? (int) $_GET['$pagedesc'] : 2;
 include ('./index.php');
