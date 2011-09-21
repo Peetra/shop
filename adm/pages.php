@@ -4,11 +4,11 @@
 
 error_reporting(E_ALL);
 include ('./index.php');
-$title = 'Administer pages'; // To be used for headline tags
+$title = $lang['ACP_INDEX_TITLE']; // To be used for headline tags
 
 ?>
-<h3>Pages</h3>
-<p> Here you can move, create, modify and delete pages.</p>
+<h3><?php echo $lang['ACP_PAGES_TITLE']?></h3>
+<p> <?php echo $lang['ACP_PAGES_EXPLAIN']?></p>
 <ul class="pages">
 <?
 	// the $prefix need {} around it to be read together with pages as it should
@@ -27,13 +27,13 @@ $title = 'Administer pages'; // To be used for headline tags
 <form method="get" action="pages.php">
 <table>
 <tr>
-	<td>Please insert the name for the new page.
+	<td> <?php echo $lang['NEW_PAGE']?>
 	<td><input type="text" name="pagename">
 <tr>
-	<td>Title (used in meta and mouseover)
+	<td><?php echo $lang['NEW_PAGE_META']?>Title (used in meta and mouseover)
 	<td><input type="text" name="headline">
 <tr>
-	<td>Description.
+	<td><?php echo $lang['NEW_PAGE_DESC']?>Description.
 	<td><input type="text" name="desk">
 <tr>
 	<td><input type="submit" name="send">

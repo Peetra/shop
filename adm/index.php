@@ -17,7 +17,7 @@ else
 $lang = ($lang == 'fi') ? 'fi' : 'en';
 setcookie('lang', $lang);
 include('../lang/' . $lang . '.php');
-$title = 'ACP Index';
+$title = $lang['ACP_INDEX_TITLE'];
 include ('./style/header.html');
 
 // We welcomes the user, on index, not needed elsewhere
