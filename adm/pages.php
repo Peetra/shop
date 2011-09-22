@@ -17,6 +17,9 @@ echo '<p>' . $lang['ACP_PAGES_EXPLAIN'] . '</p></div>';
 	</ul>
 	</menu>
 <?php
-if (basename($who_am_i, ".php") == 'users') // basename returns the end of a path, here we exclude the fileextension
+if (basename($who_am_i, ".php") == 'pages') // basename returns the end of a path, here we exclude the fileextension
+{
+	include ('./pagesEdit.php');
 	include ('./style/footer.html');
+}
 ?>

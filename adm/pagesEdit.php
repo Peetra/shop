@@ -1,8 +1,8 @@
 <?php
 error_reporting(E_ALL);
-
-include ('./pages.php');
-include ('../connection.php');
+$who_am_i = $_SERVER['PHP_SELF'];
+if (basename($who_am_i, ".php") != 'pages')
+	include ('./pages.php');
 $pID = 		(isset($_GET['pID'])) ? (int) $_GET['pID'] : 0;
 $pagename = (isset($_GET['pagename'])) ? $_GET['pagename'] : '';
 $pagename = strip_tags($pagename);
@@ -19,7 +19,7 @@ mysql_query($sql);
   <h3 class="pages"><?php echo $lang['CHANGE_PAGE_DETAILS']?></h3>
   <ul>
 <?		// List pages for easy access by clicking
-        $sql = "SELECT * FROM {$prefix}pages";
+        $sql = "SELECT * FROM {$prefix}pages ORDER BY prio ASC";
         $result = mysql_query($sql);
         while($row=mysql_fetch_object($result))
         {
@@ -52,4 +52,5 @@ mysql_free_result($result);
       <p><input type="submit" name="send"></p>
 </form>
 <?
+if (basename($who_am_i, ".php") == 'pagesEdit')
 	include ('./style/footer.html');
