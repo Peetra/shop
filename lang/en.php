@@ -14,30 +14,38 @@ if (empty($lang) || !is_array($lang))
 
 // Take $lang and add the language specific elements to get localized content.
 $lang = array_merge($lang, array(
-	'ACP_'		=> '',
-	'ACP_INDEX'		=> '',
-	'ACP_INDEX_TITLE'		=> 'ACP Index',
+	// misc
 	'ACP_WELCOME'		=> 'Welcome to your shop ACP. Use the navigation to personalize your business.<br>Fast actions can be managed from this overview.<br> Good sales!',
-
-	// Administer pages
+	'CLEAR'		=> '',
+	'SHOP_FRONTEND'		=> 'Go to the frontend of your shop',
+	// top menu
+	'ACP_INDEX'		=> 'ACP Index',
+	'PAGES'		=> 'Pages',
+	'PRODUCTS'	=> 'Products',
+	'USERS'		=> 'Users',
+	// Pages
 	'ACP_PAGES_TITLE'		=> 'Administer Pages',
 	'ACP_PAGES_EXPLAIN'		=> 'Here you can move, create, modify and delete pages.',
 
-	// Page form
-	'NEW_PAGE'		=> 'Please insert the name for the new page.',
-	'PAGE_META'		=> 'Title (used in meta and mouseover)',
-	'PAGE_DESC'		=> 'Description aka notes to yourself',
-	'CHANGE_PAGE_DETAILS'		=> 'Change page title and settings',
-	'PAGE_ID'		=> 'Page ID',
-	'PAGE_POSITION'		=> 'Page position',
-	'PAGE_POSITION_EXPLAIN'		=> 'The menu is ordered by this number, set to 0 to hide page from menu.',
-	'CLEAR'		=> '',
 	'CHANGE_PAGE'		=> 'Your new name for the page',
+	'CHANGE_PAGE_DETAILS'		=> 'Change page title and settings',
+
+	'DEL_PAGE'		=> 'Delete page',
 	''		=> '',
 	'EDIT_PAGE'		=> 'Edit page',
-	'NEW_PAGE'		=> 'Add page',
-	'DEL_PAGE'		=> 'Delete page',
-	'SHOP_FRONTEND'		=> 'Go to the frontend of your shop',
+
+	'NEW_PAGE'		=> 'Please insert the name for the new page.',
+	'NEW_PAGE_MENU'		=> 'Add page',
+
+	'PAGE_DESC'		=> 'Description aka notes to yourself',
+	'PAGE_ID'		=> 'Page ID',
+	'PAGE_META'		=> 'Title (used in meta and mouseover)',
+	'PAGE_POSITION'		=> 'Page position',
+	'PAGE_POSITION_EXPLAIN'		=> 'The menu is ordered by this number, set to 0 to hide page from menu.',
+
+
+
+
 	''		=> '',
 	''		=> '',
 	''		=> '',
