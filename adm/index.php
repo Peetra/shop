@@ -24,4 +24,6 @@ include ('./style/header.html');
 $who_am_i = $_SERVER['PHP_SELF']; // $_SERVER is a reserved variable in php, very handy
 if (basename($who_am_i, ".php") == 'index') // basename returns the end of a path, here we exclude the fileextension
 	echo '<p>' . $lang['ACP_WELCOME'] . '</p>';
+
+include('./functions.php');
 ?>

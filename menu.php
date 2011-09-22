@@ -1,6 +1,6 @@
-<?php 
+<?php
 $page = (isset($GET_['page'])) ? (int)$_GET['page'] : 0;
-$mej = $_SERVER['PHP_SELF'];  //naa, hopefully a temporary solution. :/
+$mej = $_SERVER['PHP_SELF'];
 echo '<menu>';
         $sql = "SELECT * FROM {$prefix}pages";
         $result = mysql_query($sql);
