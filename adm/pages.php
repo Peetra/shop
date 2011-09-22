@@ -1,12 +1,12 @@
-<?php // adm/pages.php
+<?php // adm/user.php
 
 // $ = (isset($_GET[''])) ? (int) $_GET[''] : 0;
 
 error_reporting(E_ALL);
 include ('./index.php');
-$title = $lang['ACP_INDEX_TITLE']; // To be used for headline tags
+$title = $lang['']; // To be used for headline tags
 echo '<div id="acp-top-explanation"><h3>' . $lang['ACP_PAGES_TITLE'] . '</h3>';
-echo '<p>' . $lang['ACP_PAGES_EXPLAIN'] . '</p></div>';
+echo '<p>' . $lang[''] . '</p></div>';
 
 ?>
 <menu class="side">
