@@ -23,6 +23,19 @@ $lang = array_merge($lang, array(
 	'PAGES'		=> 'Pages',
 	'PRODUCTS'	=> 'Products',
 	'USERS'		=> 'Users',
+	// Products
+	'ACP_PRODUCTS_TITLE'		=> 'Administer Products',
+	'ACP_PRODUCTS_EXPLAIN'		=> 'Here you can add, change details for and delete products.',
+	'PRODUCTS_EDIT'	=> 'Change product details',
+	'PRODUCTS_ADD'		=> 'Add products',
+	'PRODUCTS_DEL'		=> 'Delete products',
+
+	// Users
+	'ACP_USERS_TITLE'		=> 'Administer Users',
+	'ACP_USERS_EXPLAIN'		=> 'Here you can add, change details for and delete users.',
+	'USERS_EDIT'	=> 'Change user details',
+	'USERS_ADD'		=> 'Add user',
+	'USERS_DEL'		=> 'Delete user',
 	// Pages
 	'ACP_PAGES_TITLE'		=> 'Administer Pages',
 	'ACP_PAGES_EXPLAIN'		=> 'Here you can move, create, modify and delete pages.',
