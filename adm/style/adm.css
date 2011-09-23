@@ -1,7 +1,9 @@
 /* Stylesheet for shop administration. */
 
 body {
-	background-color: #719A79;
+	background-color: #C1D7BB;
+	color: #141012;
+	font-family: Arial;
 }
 
 img.goto-start {
@@ -35,8 +37,29 @@ menu.side {
 
 .pages {
 	list-style: none;
-	margin: -2px 0 0 200px;
+	margin: 0 0 0 200px;
 }
+.pID{
+	background-color: red;
+}
+
 h3.pages{
 	margin-top: -70px;
+}
+.per75 {
+	font-size: 75%;
+	color: #191919;
+}
+legend {
+	font-size: 108%;
+	color: #191919;
+	padding: 0 0 12px 2px;
+}
+
+fieldset {
+	display: inline-block;
+}
+.per85 {
+	font-size: 85%;
+	color: #191919;
 }

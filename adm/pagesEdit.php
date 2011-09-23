@@ -1,4 +1,4 @@
-<?php
+<?php // ooops http://validator.w3.org/check?uri=http%3A%2F%2Fcosmo.kpedu.fi%2F~peetra%2Fshop%2Fadm%2Fpages.php&charset=%28detect+automatically%29&doctype=Inline&group=0
 error_reporting(E_ALL);
 $who_am_i = $_SERVER['PHP_SELF'];
 if (basename($who_am_i, ".php") != 'pages')
@@ -24,32 +24,34 @@ mysql_query($sql);
         while($row=mysql_fetch_object($result))
         {
           echo "<li class=\"pages\"><a href=\"./pagesEdit.php?pID=" . $row->pID . "&amp;pagename=" . $row->pagename . "&amp;desk=" . $row->desk . "&amp;headline=" . $row->headline . "&amp;prio=" . $row->prio . "\">";
-          echo $row->pID . ' ' . $row->pagename. '</a></li>';
-	//  echo '<p>' . $row->desk . '</p>';
+          echo $row->pID . ' ' . $row->pagename. ' </a><span class="per75"> ' . $row->desk . '</span></li>';
+		  // echo '';
         }
 mysql_free_result($result);
 ?>
   </ul>
 <form method="get" action="">
+	<fieldset>
+		<legend><?php echo $lang['CHANGE_PAGE_DETAILS']?></legend>
   <table>
     <tr>
 	<td><?php echo $lang['PAGE_ID']?></td>
-	<td><input type="text" name="pID" readonly value="<?php echo $pID; ?>"></td>
+	<td><input type="text" name="pID" size="3" readonly value="<?php echo $pID; ?>"></td>
     <tr>
 	<td><?php echo $lang['CHANGE_PAGE']?></td>
 	<td><input type="text" name="pagename" value="<?php echo $pagename; ?>"></td>
     <tr>
 	<td><?php echo $lang['PAGE_META']?></td>
-	<td><input type="text" name="headline" value="<?php echo $headline; ?>"></td>
+	<td><input type="text" name="headline" size="42" required value="<?php echo $headline; ?>"></td>
     <tr>
 	<td><?php echo $lang['PAGE_DESC']?></td>
-	<td><input type="text" name="desk" size="57" value="<?php echo $desk; ?>"></td>
+	<td><textarea name="desk" cols="42"	rows="4"><?php echo $desk; ?></textarea></td>
     <tr>
-	<td><?php echo $lang['PAGE_POSITION']?><br><small><?php echo $lang['PAGE_POSITION_EXPLAIN']?></small></td>
-	<td><input type="text" name="prio" value="<?php echo $prio; ?>"></td>
+	<td><?php echo $lang['PAGE_POSITION']?><br><span class="per85"><?php echo $lang['PAGE_POSITION_EXPLAIN']?></span></td>
+	<td><input type="text" name="prio" size="3" value="<?php echo $prio; ?>"> <input type="submit" span style="background-color: #969696"; name="send"></td>
   </table>
-  <!-- FIX THIS!!-->
-      <p><input type="submit" name="send"></p>
+	</fieldset>
+
 </form>
 <?
 if (basename($who_am_i, ".php") == 'pagesEdit')

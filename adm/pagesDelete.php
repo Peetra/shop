@@ -12,7 +12,8 @@ mysql_query($sql);
 <h3 class="pages"><?php echo $lang['DEL_PAGE']?></h3>
   <p class="pages"><?php echo $lang['DEL_PAGE_EXPLAIN']?>.</p>
   <ul>
-    <small>
+	<span class="per85">
+
 <?
         $sql = "SELECT * FROM {$prefix}pages ORDER BY prio ASC";
         $result = mysql_query($sql);
@@ -27,8 +28,8 @@ mysql_query($sql);
         }
 mysql_free_result($result);
 ?>
-    </small>
-  </ul>
+	</span>
+ </ul>
 <?php
 // Close db-connection
 mysql_close($connection);
