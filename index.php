@@ -17,9 +17,9 @@ $lang = ($lang == 'fi') ? 'fi' : 'en';
 setcookie('lang', $lang);
 include('./lang/' . $lang . '.php');
 include('./connection.php');
-include('./functions.php');
+include('./shopFunctions.php');
 $title = 'Start';
-$desc = 'Description of site'; // I'll try to remember to suff this in teh db. 
+$desc = 'Description of site'; // I'll try to remember to stuff this in teh db.
 include('./styles/default/header.html');
-include('menu.php');
+include('shopOverall.php');
 ?>
