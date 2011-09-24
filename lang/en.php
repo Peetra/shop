@@ -15,7 +15,7 @@ if (empty($lang) || !is_array($lang))
 // Take $lang and add the language specific elements to get localized content.
 $lang = array_merge($lang, array(
 	// misc aka common
-	'ACP_WELCOME'		=> 'Welcome to your shop ACP. Use the navigation to personalize your business.<br>Fast actions can be managed from this overview.<br> Good sales!',
+	'ACP_WELCOME'		=> 'Welcome to your shop Administration Control Panel. Use the navigation to find tools and personalize your business.<br>Fast actions can be managed from this overview.<br> Good sales!',
 	'CLEAR'		=> '',
 	'SHOP_FRONTEND'		=> 'Go to the frontend of your shop',
 	'KEYWORDS'		=> 'Shop online in Finland, assecoaries, leather, gifts, gizmo, girlpower',
@@ -39,7 +39,9 @@ $lang = array_merge($lang, array(
 	'USERS_EDIT'	=> 'Change user details',
 	'USERS_ADD'		=> 'Add user',
 	'USERS_DEL'		=> 'Delete user',
+
 	// Pages
+	'ADD_PAGE'		=> 'Add a new page',
 	'ACP_PAGES_TITLE'		=> 'Administer Pages',
 	'ACP_PAGES_EXPLAIN'		=> 'Here you can move, create, modify and delete pages.',
 
@@ -52,19 +54,17 @@ $lang = array_merge($lang, array(
 	''		=> '',
 	'EDIT_PAGE'		=> 'Edit page',
 
-	'NEW_PAGE'		=> 'Please insert the name for the new page.',
-	'NEW_PAGE_MENU'		=> 'Add page',
+	'NEW_PAGE'		=> 'Add page',
+	'NEW_PAGE_EXPLAIN'		=> 'Please insert a name for the new page.',
 
-	'PAGE_DESC'		=> 'Description aka notes to yourself',
+	'PAGE_DESC'		=> 'Description',
+	'PAGE_DESC_EXPLAIN'		=> 'Notes to yourself',
 	'PAGE_ID'		=> 'Page ID',
-	'PAGE_META'		=> 'Title (used in meta and mouseover)',
+	'PAGE_META'		=> 'Title',
+	'PAGE_META_EXPLAIN'		=> '(used in meta and mouseover)', // not implemented yet Sept 23 2011
 	'PAGE_POSITION'		=> 'Page position',
-	'PAGE_POSITION_EXPLAIN'		=> 'The menu is ordered by this number,<br />set to 0 to hide page from menu.',
+	'PAGE_POSITION_EXPLAIN'		=> 'The menu is ordered by this number,<br />set to 0 to hide page from frontend menu.',
 
-
-
-
-	''		=> '',
 	''		=> '',
 	''		=> '',
 	''		=> '',
