@@ -14,10 +14,13 @@ if (empty($lang) || !is_array($lang))
 
 // Take $lang and add the language specific elements to get localized content.
 $lang = array_merge($lang, array(
-	// misc
+	// misc aka common
 	'ACP_WELCOME'		=> 'Welcome to your shop ACP. Use the navigation to personalize your business.<br>Fast actions can be managed from this overview.<br> Good sales!',
 	'CLEAR'		=> '',
 	'SHOP_FRONTEND'		=> 'Go to the frontend of your shop',
+	'KEYWORDS'		=> 'Shop online in Finland, assecoaries, leather, gifts, gizmo, girlpower',
+	'METALANG'		=> 'en', // FI SV
+
 	// top menu
 	'ACP_INDEX'		=> 'ACP Index',
 	'PAGES'		=> 'Pages',
@@ -56,7 +59,7 @@ $lang = array_merge($lang, array(
 	'PAGE_ID'		=> 'Page ID',
 	'PAGE_META'		=> 'Title (used in meta and mouseover)',
 	'PAGE_POSITION'		=> 'Page position',
-	'PAGE_POSITION_EXPLAIN'		=> 'The menu is ordered by this number, set to 0 to hide page from menu.',
+	'PAGE_POSITION_EXPLAIN'		=> 'The menu is ordered by this number,<br />set to 0 to hide page from menu.',
 
 
 

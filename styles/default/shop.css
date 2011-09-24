@@ -1,0 +1,16 @@
+body {
+  
+}
+
+body a:link {color: maroon;}
+body a:visited {color: maroon;}
+body a:hover {color: blue;}
+
+menu {
+
+}
+menu a:link {color: red;}
+menu a:visited {color: green;}
+menu a:hover {color: blue;}
+menu a:focus {color: yellow;} /* tabbing with Keyboard */
+menu a:active {color: black;} /* when holding mouse button down */

@@ -7,6 +7,7 @@ echo '<menu>';
 			if (!$row->prio==0)
 			  echo '<a href="index.php?page=' . $row->pID . '">' . $row->pagename. '</a> ';
 		}
+echo '</menu>';
 		// Notice: Undefined index: page in /home/peetra/public_html/shop/menu.php on line 13
         switch($_GET['page'])
 		{
@@ -28,8 +29,8 @@ echo '<menu>';
 				break;
 				break;
 				default:
-				echo 'No page indexed';
+				echo 'No page indexed - HÄÄ-HÄÄ';
 		}
 		        mysql_free_result($result);
-echo '</menu>';
+
 ?>
