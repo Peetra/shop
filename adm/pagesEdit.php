@@ -31,6 +31,7 @@ mysql_free_result($result);
 ?>
   </ul>
 <form method="get" action="">
+	<!-- this fieldset/legend stuff is not an option for IE9, shall reconsider -->
 	<fieldset>
 		<legend><?php echo $lang['CHANGE_PAGE_DETAILS']?></legend>
   <table>
@@ -39,13 +40,13 @@ mysql_free_result($result);
 	<td><input type="text" name="pID" size="3" readonly value="<?php echo $pID; ?>"></td>
     <tr>
 	<td><?php echo $lang['CHANGE_PAGE']?></td>
-	<td><input type="text" name="pagename" value="<?php echo $pagename; ?>"></td>
+	<td><input type="text" name="pagename" required value="<?php echo $pagename; ?>"></td>
     <tr>
 	<td><?php echo $lang['PAGE_META']?></td>
-	<td><input type="text" name="headline" size="42" required value="<?php echo $headline; ?>"></td>
+	<td><input type="text" name="headline" size="33"  value="<?php echo $headline; ?>"></td>
     <tr>
 	<td><?php echo $lang['PAGE_DESC']?></td>
-	<td><textarea name="desk" cols="42"	rows="4"><?php echo $desk; ?></textarea></td>
+	<td><textarea name="desk" cols="33"	rows="3"><?php echo $desk; ?></textarea></td>
     <tr>
 	<td><?php echo $lang['PAGE_POSITION']?><br><span class="per85"><?php echo $lang['PAGE_POSITION_EXPLAIN']?></span></td>
 	<td><input type="text" name="prio" size="3" value="<?php echo $prio; ?>"> <input type="submit" span style="background-color: #969696"; name="send"></td>
