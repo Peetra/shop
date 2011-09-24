@@ -29,11 +29,11 @@ mysql_query($sql);
         }
 mysql_free_result($result);
 ?>
-  </ul>
-<form method="get" action="">
-	<!-- this fieldset/legend stuff is not an option for IE9, shall reconsider -->
+  </ul>	<!-- this fieldset/legend stuff is not an option for IE9, shall reconsider -->
 	<fieldset>
 		<legend><?php echo $lang['CHANGE_PAGE_DETAILS']?></legend>
+<form method="get" action="">
+
   <table>
     <tr>
 	<td><?php echo $lang['PAGE_ID']?></td>
@@ -49,11 +49,12 @@ mysql_free_result($result);
 	<td><textarea name="desk" cols="33"	rows="3"><?php echo $desk; ?></textarea></td>
     <tr>
 	<td><?php echo $lang['PAGE_POSITION']?><br><span class="per85"><?php echo $lang['PAGE_POSITION_EXPLAIN']?></span></td>
-	<td><input type="text" name="prio" size="3" value="<?php echo $prio; ?>"> <input type="submit" span style="background-color: #969696"; name="send"></td>
+	<td><input type="text" name="prio" size="3" value="<?php echo $prio; ?>">	
+	    <input type="submit" name="send" ></td>
   </table>
-	</fieldset>
 
-</form>
+
+</form>	</fieldset>
 <?
 if (basename($who_am_i, ".php") == 'pagesEdit')
 	include ('./style/footer.html');

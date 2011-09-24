@@ -5,21 +5,14 @@ body {
 	color: #141012;
 	font-family: Arial;
 }
-
-img.a:visited{
-  text-decoration: none;
-  border: none;
-}
-img.a:hover{
-  color: blue;
-}
-
 img.goto-start {
+  border: none;
 	width:110px;
 	height:110px;
 	-moz-border-radius: 5px;/* round corners in Firefox */
 }
 img.goto-shop {
+  border: none;
 	margin: -330px 0 0 550px;
 	width:110px;
 	height:110px;
