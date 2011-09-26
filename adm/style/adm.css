@@ -6,17 +6,18 @@ body {
 	font-family: Arial;
 }
 img.goto-start {
-  border: none;
+
 	width:110px;
 	height:110px;
 	-moz-border-radius: 5px;/* round corners in Firefox */
+	  border: none;
 }
 img.goto-shop {
-  border: none;
 	margin: -330px 0 0 550px;
 	width:110px;
 	height:110px;
 	-moz-border-radius: 5px;/* round corners in Firefox */
+	  border: none;
 }
 
 menu.main {

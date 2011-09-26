@@ -18,6 +18,7 @@ $sql = "UPDATE {$prefix}pages
 mysql_query($sql);
 ?>
   <h3 class="pages"><?php echo $lang['CHANGE_PAGE_DETAILS']?></h3>
+  <p class="pages"><?php echo $lang['CHANGE_PAGE_EXPLAIN']?> </p>
   <table class="pages">
     <tr  class="pages"><td>pID | Pagename</td><td>Notes</td>
 <?		// List pages for easy access by clicking

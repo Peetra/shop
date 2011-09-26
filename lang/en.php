@@ -47,7 +47,9 @@ $lang = array_merge($lang, array(
 
 	'CHANGE_PAGE'		=> 'Your new name for the page',
 	'CHANGE_PAGE_DETAILS'		=> 'Change page title and settings',
-
+	'CHANGE_PAGE_EXPLAIN'		=> 'Click on a page to select for editing.',
+	
+	'CHANGE_PAGE_DETAILS'		=> 'Change page title and settings',
 	'DEL_PAGE'		=> 'Delete page',
 	'DEL_PAGE_EXPLAIN'		=> 'Click a page to delete it. This can not be undone',
 	'DEL_PAGE_REALLY'		=> 'Are you sure, deleting page',
