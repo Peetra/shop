@@ -31,10 +31,10 @@ echo '<menu>';
 echo '<!-- If user logged in and admin, functions yet to be done. --> | <a href="./adm/">[ REAL ACP ] </a></menu>';
 echo '<a href="shopUsers.php">[ shopUsers.php ] </a></menu>';
 		// Notice: Undefined index: page in /home/peetra/public_html/shop/menu.php on line 13
-        switch($_GET['page'])
+        switch(@$_GET['page'])
 		{
 			case 0:
-				echo 'Hidden content';
+				echo 'case 0, hidden content - HÄÄ-HÄÄ';
 				break;
 			case 1:
 			echo basename(__FILE__);
@@ -51,7 +51,7 @@ echo '<a href="shopUsers.php">[ shopUsers.php ] </a></menu>';
 				break;
 				break;
 				default:
-				echo 'No page indexed - HÄÄ-HÄÄ';
+				echo 'HÄÄ-HÄÄ - default:No page indexed - HÄÄ-HÄÄ';
 		}
 		        mysql_free_result($result);
 

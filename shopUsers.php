@@ -1,15 +1,14 @@
 <?php // shopUsers.php
-
 // $ = (isset($_GET[''])) ? (int) $_GET[''] : 0;
 
 error_reporting(E_ALL);
+$title = 'shopUsers';
 include ('./shopOverall.php');
-$title = $lang[''];
+
 echo '<div><h3>' . $lang[''] . '</h3>';
 echo '<p>' . $lang[''] . '</p></div>';
 
 $uID = (isset($_POST['uID'])) ? (int) $_POST['uID'] : 0;
-
 $fname = (isset($_POST['fname']) ? $_POST['fname'] : '');
 $fname = mysql_real_escape_string($fname);
 $lname = (isset($_POST['lname'])? $_POST['lname'] : '');
@@ -22,46 +21,48 @@ $phone = (isset($_POST['phone'])? $_POST['phone'] : '');
 $phone = mysql_real_escape_string($phone);
 $email = (isset($_POST['email'])? $_POST['email'] : '');
 $email = mysql_real_escape_string($email);
-
+$password = (isset($_POST['password'])? $_POST['password'] : '');
+$password = mysql_real_escape_string($password);
 $zip = (isset($_POST['zip'])) ? (int) $_POST['zip'] : 0;
 
 ?>
-<h3>Rekisteröidy</h3>
+<h3><?=$lang['REGISTER'];?></h3>
 <form method="post" action="">
   <table>
     <tr>
-	<td>Etunimi</td>
-	<td><input type="text" name="fname" value="<?php echo stripslashes($fname); ?>"></td>
+	<td><?=$lang['FIRST NAME'];?></td>
+	<td><input type="text" name="fname" value="<?=stripslashes($fname);?>"></td>
     <tr>
-	<td>Sukunimi</td>
-	<td><input type="text" name="lname" value="<?php echo stripslashes($lname); ?>"></td>
+	<td><?=$lang['LAST NAME'];?></td>
+	<td><input type="text" name="lname" value="<?=stripslashes($lname);?>"></td>
 	<tr>
-		<td>Katusoite</td>
-	<td><input type="text" name="street" value="<?php echo stripslashes($street); ?>"></td>
+		<td><?=$lang['STREET ADDRESS'];?></td>
+	<td><input type="text" name="street" value="<?=stripslashes($street);?>"></td>
 	<tr>
-	<td>zip</td>
-	<td><input type="text" name="zip" value="<?php echo $zip; ?>"></td>	
+	<td><?=$lang['ZIP'];?></td>
+	<td><input type="text" name="zip" value="<?=$zip;?>"></td>	
 		<tr>
-		<td>city</td>
-	<td><input type="text" name="city" value="<?php echo stripslashes($city); ?>"></td>
-	
+		<td><?=$lang['CITY'];?></td>
+	<td><input type="text" name="city" value="<?=stripslashes($city);?>"></td>
 		<tr>
-		<td>phonenumero</td>
-	<td><input type="text" name="phone" value="<?php echo stripslashes($phone); ?>"></td>
-	
+		<td><?=$lang['PHONE'];?></td>
+	<td><input type="text" name="phone" value="<?=stripslashes($phone);?>"></td>
 		<tr>
-		<td>Sähköposti</td>
-	<td><input type="text" name="email" value="<?php echo stripslashes($email); ?>"></td>
+		<td><?=$lang['EMAIL'];?></td>
+	<td><input type="text" name="email" value="<?=stripslashes($email);?>"></td>
+		<tr>
+		<td><?=$lang['PASSWORD'];?></td>
+	<td><input type="password" name="password" value="<?=stripslashes($password);?>"></td>
 	
 	<tr>
-	<td></td><td><input type="submit" name="laheta" value="Lähetä"><input type="reset"></td>
+	<td></td><td><input type="submit" name="send" value="<?=$lang['SEND']?>"><input type="reset" value="<?=$lang['RESET']?>"></td>
   </table>
 </form>
 <?php
 if ($fname != '')
 {
-	$sql = "INSERT INTO {$prefix}customers (uID, fname, lname, street, zip, city, phone, email)
-                        VALUES ('', '$fname', '$lname', '$street', '$zip', '$city', '$phone', '$email')";
+	$sql = "INSERT INTO {$prefix}customers (uID, fname, lname, street, zip, city, phone, email, password)
+                        VALUES ('', '$fname', '$lname', '$street', '$zip', '$city', '$phone', '$email', '$password')";
                         mysql_query($sql);
 }
 
