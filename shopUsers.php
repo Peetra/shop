@@ -75,6 +75,5 @@ if ($fname != '')
           echo $row->fname . '__</small> ' ;
         }
         mysql_free_result($result);
-where_am_i('', 'shopUsers');
-//	include ('./styles/default/footer.html');
+where_am_i('', ('index' || 'shopUsers'));
 ?>
