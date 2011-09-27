@@ -32,6 +32,14 @@ else
 
 if ($ind == 'ind')
 	echo '<p>' . $lang['ACP_WELCOME'] . '</p>';
+	?><pre>
+
+
+			Add product
+								Hide product
+		Open orders			Hide page
+									Close shop<pre>
+	<?
 
 include('./functions.php');
 ?>

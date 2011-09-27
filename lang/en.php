@@ -16,6 +16,19 @@ $lang = array_merge($lang, array(
 	'SEND' => 'Send',
 	'RESET' => 'Reset',
 	'SHOP_FRONTEND'		=> 'Go to the frontend of your shop',
+	'ACP_SETTINGS'		=> 'Settings',
+	'ACP_SETTINGS_TITLE'		=> 'Miscelangelous things',
+	'ACP_SETTINGS_EXPLAIN'		=> 'I wanted to do radiobuttons, therfor here is MISC',
+	''		=> '',
+	'GOODIE'		=> 'Goodies',
+	'ONOFF'		=> 'The Shop Frontend is',
+	'ON' => '42 open for Business.',
+	'OFF' => '0 OFF (Closed)',
+	'TRACKER'		=> 'Tracking code',
+	'TRACKER_EXPLAIN'		=> 'Insert your traffic tracker/statistic code here, it will be loaded last on the page on every page in the frontend of the shop.',
+	''		=> '',
+
+	// misc FRONTEND
 	'KEYWORDS'		=> 'Shop online in Finland, assecoaries, leather, gifts, gizmo, girlpower',
 	'METALANG'		=> 'en', // FI SV
 	'DESC'		=> 'Wonderful handcraft in leather from Finland',
