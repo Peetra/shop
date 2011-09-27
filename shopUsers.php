@@ -23,7 +23,7 @@ $email = (isset($_POST['email'])? $_POST['email'] : '');
 $email = mysql_real_escape_string($email);
 $password = (isset($_POST['password'])? $_POST['password'] : '');
 $password = mysql_real_escape_string($password);
-$zip = (isset($_POST['zip'])) ? (int) $_POST['zip'] : 0;
+$zip = (isset($_POST['zip'])) ? (int) $_POST['zip'] : '';
 
 ?>
 <h3><?=$lang['REGISTER'];?></h3>
@@ -31,19 +31,20 @@ $zip = (isset($_POST['zip'])) ? (int) $_POST['zip'] : 0;
   <table>
     <tr>
 	<td><?=$lang['FIRST NAME'];?></td>
-	<td><input type="text" name="fname" value="<?=stripslashes($fname);?>"></td>
+	<!-- The required statement isn't supported in IE9, do not rely on in just yet. -->
+	<td><input type="text" name="fname" required value="<?=stripslashes($fname);?>"></td>
     <tr>
 	<td><?=$lang['LAST NAME'];?></td>
-	<td><input type="text" name="lname" value="<?=stripslashes($lname);?>"></td>
+	<td><input type="text" name="lname" required value="<?=stripslashes($lname);?>"></td>
 	<tr>
 		<td><?=$lang['STREET ADDRESS'];?></td>
-	<td><input type="text" name="street" value="<?=stripslashes($street);?>"></td>
+	<td><input type="text" name="street" required value="<?=stripslashes($street);?>"></td>
 	<tr>
 	<td><?=$lang['ZIP'];?></td>
-	<td><input type="text" name="zip" value="<?=$zip;?>"></td>	
+	<td><input type="text" name="zip" required value="<?=$zip;?>"></td>
 		<tr>
 		<td><?=$lang['CITY'];?></td>
-	<td><input type="text" name="city" value="<?=stripslashes($city);?>"></td>
+	<td><input type="text" name="city" required value="<?=stripslashes($city);?>"></td>
 		<tr>
 		<td><?=$lang['PHONE'];?></td>
 	<td><input type="text" name="phone" value="<?=stripslashes($phone);?>"></td>
@@ -53,7 +54,7 @@ $zip = (isset($_POST['zip'])) ? (int) $_POST['zip'] : 0;
 		<tr>
 		<td><?=$lang['PASSWORD'];?></td>
 	<td><input type="password" name="password" value="<?=stripslashes($password);?>"></td>
-	
+
 	<tr>
 	<td></td><td><input type="submit" name="send" value="<?=$lang['SEND']?>"><input type="reset" value="<?=$lang['RESET']?>"></td>
   </table>
@@ -75,6 +76,6 @@ if ($fname != '')
           echo $row->fname . '__</small> ' ;
         }
         mysql_free_result($result);
-
-	include ('./styles/default/footer.html');
+where_am_i('shopUsers');
+//	include ('./styles/default/footer.html');
 ?>
