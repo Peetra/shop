@@ -65,15 +65,5 @@ if ($fname != '')
                         VALUES ('', '$fname', '$lname', '$street', '$zip', '$city', '$phone', '$email', '$password')";
                         mysql_query($sql);
 }
-
-
-        $sql = "SELECT * FROM {$prefix}customers ORDER BY 'fname' ASC";
-        $result = mysql_query($sql);
-        while($row=mysql_fetch_object($result))
-		{
-          echo '<small> ' . $row->uID . ' ';
-          echo $row->fname . '__</small> ' ;
-        }
-        mysql_free_result($result);
 where_am_i('', ('index' || 'shopUsers'));
 ?>
