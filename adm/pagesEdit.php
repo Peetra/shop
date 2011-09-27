@@ -17,8 +17,8 @@ $sql = "UPDATE {$prefix}pages
 		WHERE pID = '$pID'";
 mysql_query($sql);
 ?>
-  <h3 class="pages"><?php echo $lang['CHANGE_PAGE_DETAILS']?></h3>
-  <p class="pages"><?php echo $lang['CHANGE_PAGE_EXPLAIN']?> </p>
+  <h3 class="pages"><?= $lang['CHANGE_PAGE_DETAILS']?></h3>
+  <p class="pages"><?= $lang['CHANGE_PAGE_EXPLAIN']?> </p>
   <table class="pages">
     <tr  class="pages"><td>pID | Pagename</td><td>Notes</td>
 <?		// List pages for easy access by clicking
@@ -37,25 +37,25 @@ if ($pID != 0)
 {
 ?>	<!-- this fieldset/legend stuff is not any good option for IE9, shall reconsider -->
 	<fieldset>
-		<legend><?php echo $lang['CHANGE_PAGE_DETAILS']?></legend>
+		<legend><?= $lang['CHANGE_PAGE_DETAILS']?></legend>
 <form method="get" action="">
 
   <table>
     <tr>
-	<td><?php echo $lang['PAGE_ID']?></td>
-	<td><input type="text" name="pID" size="3" readonly value="<?php echo $pID; ?>"></td>
+	<td><?= $lang['PAGE_ID']?></td>
+	<td><input type="text" name="pID" size="3" readonly value="<?= $pID; ?>"></td>
     <tr>
-	<td><?php echo $lang['CHANGE_PAGE']?></td>
-	<td><input type="text" name="pagename" required value="<?php echo $pagename; ?>"></td>
+	<td><?= $lang['CHANGE_PAGE']?></td>
+	<td><input type="text" name="pagename" required value="<?= $pagename; ?>"></td>
     <tr>
-	<td><?php echo $lang['PAGE_META']?></td>
-	<td><input type="text" name="headline" size="33"  value="<?php echo $headline; ?>"></td>
+	<td><?= $lang['PAGE_META']?></td>
+	<td><input type="text" name="headline" size="33"  value="<?= $headline; ?>"></td>
     <tr>
-	<td><?php echo $lang['PAGE_DESC']?><br><span class="per75"><?php echo $lang['PAGE_DESC_EXPLAIN']?></span></td>
-	<td><textarea name="desk" cols="33"	rows="3"><?php echo $desk; ?></textarea></td>
+	<td><?= $lang['PAGE_DESC']?><br><span class="per75"><?= $lang['PAGE_DESC_EXPLAIN']?></span></td>
+	<td><textarea name="desk" cols="33"	rows="3"><?= $desk; ?></textarea></td>
     <tr>
-	<td><?php echo $lang['PAGE_POSITION']?><br><span class="per85"><?php echo $lang['PAGE_POSITION_EXPLAIN']?></span></td>
-	<td><input type="text" name="prio" size="3" value="<?php echo $prio; ?>">
+	<td><?= $lang['PAGE_POSITION']?><br><span class="per85"><?= $lang['PAGE_POSITION_EXPLAIN']?></span></td>
+	<td><input type="text" name="prio" size="3" value="<?= $prio; ?>">
 	    <input type="submit" name="send" ></td>
   </table>
 

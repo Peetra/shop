@@ -15,7 +15,7 @@ $prio = 		(isset($_GET['prio'])) ? (int) $_GET['prio'] : 0;
   $sql = "SELECT * FROM {$prefix}pages ORDER BY pagename ASC";
   $result = mysql_query($sql);
 ?>
-<h3 class="pages"><?php echo $lang['ADD_PAGE']?></h3>
+<h3 class="pages"><?= $lang['ADD_PAGE']?></h3>
 	<table class="pages">
 		<tr><td>pID<td>Position<td>Pagename
 
@@ -48,16 +48,16 @@ if ($pagename != '')
 <form method="get" action="pagesAdd.php">
 <table>
 <tr>
-	<td> <?php echo $lang['NEW_PAGE']?><br><span class="per75"><?php echo $lang['NEW_PAGE_EXPLAIN']?></span>
+	<td> <?= $lang['NEW_PAGE']?><br><span class="per75"><?= $lang['NEW_PAGE_EXPLAIN']?></span>
 	<td><input type="text" name="pagename" required >
 <tr>
-	<td><?php echo $lang['PAGE_META']?><br><span class="per75"><?php echo $lang['PAGE_META_EXPLAIN']?></span>
+	<td><?= $lang['PAGE_META']?><br><span class="per75"><?= $lang['PAGE_META_EXPLAIN']?></span>
 	<td><input type="text" name="headline">
 <tr>
-	<td><?php echo $lang['PAGE_DESC']?><br><span class="per75"><?php echo $lang['PAGE_DESC_EXPLAIN']?></span>
+	<td><?= $lang['PAGE_DESC']?><br><span class="per75"><?= $lang['PAGE_DESC_EXPLAIN']?></span>
 	<td><input type="text" name="desk">
 <tr>
-	<td><?php echo $lang['PAGE_POSITION']?><br><span class="per75"><?php echo $lang['PAGE_POSITION_EXPLAIN']?></span>
+	<td><?= $lang['PAGE_POSITION']?><br><span class="per75"><?= $lang['PAGE_POSITION_EXPLAIN']?></span>
 	<td><input type="text" name=prio">
 <tr>
 	<td><input type="submit" name="send">

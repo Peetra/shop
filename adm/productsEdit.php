@@ -23,7 +23,7 @@ $sql = "UPDATE {$prefix}products
 		WHERE pID = '$pID'";
 mysql_query($sql);
 ?>
-  <h3 class="products"><?php echo $lang['CHANGE_PAGE_DETAILS']?></h3>
+  <h3 class="products"><?= $lang['CHANGE_PAGE_DETAILS']?></h3>
   <ul>
 <?		// List products for easy access by clicking
         $sql = "SELECT * FROM {$prefix}products ORDER BY prio ASC";
@@ -40,20 +40,20 @@ mysql_free_result($result);
 <form method="get" action="">
   <table>
     <tr>
-	<td><?php echo $lang['PAGE_ID']?></td>
-	<td><input type="text" name="pID" readonly value="<?php echo $pID; ?>"></td>
+	<td><?= $lang['PAGE_ID']?></td>
+	<td><input type="text" name="pID" readonly value="<?= $pID; ?>"></td>
     <tr>
-	<td><?php echo $lang['CHANGE_PAGE']?></td>
-	<td><input type="text" name="pagename" value="<?php echo $pagename; ?>"></td>
+	<td><?= $lang['CHANGE_PAGE']?></td>
+	<td><input type="text" name="pagename" value="<?= $pagename; ?>"></td>
     <tr>
-	<td><?php echo $lang['PAGE_META']?></td>
-	<td><input type="text" name="headline" value="<?php echo $headline; ?>"></td>
+	<td><?= $lang['PAGE_META']?></td>
+	<td><input type="text" name="headline" value="<?= $headline; ?>"></td>
     <tr>
-	<td><?php echo $lang['PAGE_DESC']?></td>
-	<td><input type="text" name="desk" size="57" value="<?php echo $desk; ?>"></td>
+	<td><?= $lang['PAGE_DESC']?></td>
+	<td><input type="text" name="desk" size="57" value="<?= $desk; ?>"></td>
     <tr>
-	<td><?php echo $lang['PAGE_POSITION']?><br><small><?php echo $lang['PAGE_POSITION_EXPLAIN']?></small></td>
-	<td><input type="text" name="prio" value="<?php echo $prio; ?>"></td>
+	<td><?= $lang['PAGE_POSITION']?><br><small><?= $lang['PAGE_POSITION_EXPLAIN']?></small></td>
+	<td><input type="text" name="prio" value="<?= $prio; ?>"></td>
   </table>
   <!-- FIX THIS!!-->
       <p><input type="submit" name="send"></p>

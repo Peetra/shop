@@ -9,8 +9,8 @@ $sql = "DELETE FROM {$prefix}pages WHERE pID = '$pID'";
 $really = $lang['DEL_PAGE_REALLY'] . ' '; // defining the lang string for the js-code here
 mysql_query($sql);
 ?>
-<h3 class="pages"><?php echo $lang['DEL_PAGE']?></h3>
-  <p class="pages"><?php echo $lang['DEL_PAGE_EXPLAIN']?>.</p>
+<h3 class="pages"><?= $lang['DEL_PAGE']?></h3>
+  <p class="pages"><?= $lang['DEL_PAGE_EXPLAIN']?>.</p>
   <ul>
 	<span class="per85">
 

@@ -11,9 +11,9 @@ echo '<p>' . $lang['ACP_PAGES_EXPLAIN'] . '</p></div>';
 ?>
 	<div id="sidemenu">
 	<ul>
-	<li><a href="./pagesEdit.php"><?php echo $lang['EDIT_PAGE']?></a></li>
-	<li><a href="./pagesAdd.php"> <?php echo $lang['NEW_PAGE']?></a></li>
-	<li><a href="./pagesDelete.php"><?php echo $lang['DEL_PAGE']?></a></li>
+	<li><a href="./pagesEdit.php"><?= $lang['EDIT_PAGE']?></a></li>
+	<li><a href="./pagesAdd.php"> <?= $lang['NEW_PAGE']?></a></li>
+	<li><a href="./pagesDelete.php"><?= $lang['DEL_PAGE']?></a></li>
 	</ul>
 	</div>
 <?php

@@ -11,9 +11,9 @@ echo '<p>' . $lang['ACP_PRODUCTS_EXPLAIN'] . '</p></div>';
 ?>
 	<menu class="side">
 	<ul>
-	<li><a href="./productsEdit.php"><?php echo $lang['PRODUCTS_EDIT']?></a></li>
-	<li><a href="./productsAdd.php"> <?php echo $lang['PRODUCTS_ADD']?></a></li>
-	<li><a href="./productsDelete.php"><?php echo $lang['PRODUCTS_DEL']?></a></li>
+	<li><a href="./productsEdit.php"><?= $lang['PRODUCTS_EDIT']?></a></li>
+	<li><a href="./productsAdd.php"> <?= $lang['PRODUCTS_ADD']?></a></li>
+	<li><a href="./productsDelete.php"><?= $lang['PRODUCTS_DEL']?></a></li>
 	</ul>
 	</menu>
 <?php
