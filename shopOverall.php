@@ -16,7 +16,7 @@ $lang = ($lang == 'fi') ? 'fi' : 'en';
 setcookie('lang', $lang);
 include('./lang/' . $lang . '.php');
 include('./connection.php');
-include('./shopFunctions.php');
+include('./inc/shopFunctions.php');
 where_am_i(('shopOverall' || 'index' || 'shopUsers'),'');
 echo '<menu>';
         $sql = "SELECT * FROM {$prefix}pages";
