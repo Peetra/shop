@@ -17,18 +17,26 @@ echo '<p>' . $lang['ACP_USERS_EXPLAIN'] . '</p></div>';
 	</ul>
 </div>
 <div>
+
 <?php
-$sql = "SELECT * FROM {$prefix}customers ORDER BY 'fname' ASC";
+if (basename($who_am_i, ".php") == 'users') // basename returns the end of a path, here we exclude the file extension
+{
+
+$sql = "SELECT * FROM {$prefix}customers ORDER BY 'lname' ASC";
 $result = mysql_query($sql);
+?>
+<table class="pages">
+		<tr><td>uID<td>Last name<td>Given name
+<?
 while($row=mysql_fetch_object($result))
 {
-  echo '<small> ' . $row->uID . ' ';
-  echo $row->fname . '__</small> ' ;
+  echo '<tr><td>' . $row->uID . '<td>' . $row->lname . '<td>' . $row->fname;
 }
 mysql_free_result($result);
 ?>
+</table>
 </div>
-<?php
-if (basename($who_am_i, ".php") == 'users') // basename returns the end of a path, here we exclude the fileextension
+<?
 	include ('./style/footer.html');
+}
 ?>
