@@ -4,7 +4,6 @@
 error_reporting(E_ALL);
 $title = 'shopUsers';
 include ('./shopOverall.php');
-
 echo '<div><h3>' . $lang[''] . '</h3>';
 echo '<p>' . $lang[''] . '</p></div>';
 
@@ -27,7 +26,7 @@ $zip = (isset($_POST['zip'])) ? (int) $_POST['zip'] : '';
 
 ?>
 <h3><?=$lang['REGISTER'];?></h3>
-<form method="post" action="">
+<form method="post" action="shopUsers.php">
   <table>
     <tr>
 	<td><?=$lang['FIRST NAME'];?></td>
@@ -76,6 +75,6 @@ if ($fname != '')
           echo $row->fname . '__</small> ' ;
         }
         mysql_free_result($result);
-where_am_i('shopUsers');
+where_am_i('', 'shopUsers');
 //	include ('./styles/default/footer.html');
 ?>

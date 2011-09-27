@@ -17,9 +17,7 @@ setcookie('lang', $lang);
 include('./lang/' . $lang . '.php');
 include('./connection.php');
 include('./shopFunctions.php');
-$who_am_i = $_SERVER['PHP_SELF'];
-if (basename($who_am_i, ".php") != 'index')
-	include ('./styles/default/header.html');
+where_am_i(('shopOverall' || 'index' || 'shopUsers'),'');
 echo '<menu>';
         $sql = "SELECT * FROM {$prefix}pages";
         $result = mysql_query($sql);
@@ -28,7 +26,7 @@ echo '<menu>';
 			if (!$row->prio==0)
 			  echo '<a href="index.php?page=' . $row->pID . '">' . $row->pagename. '</a> ';
 		}
-echo '<br><!-- If user logged in and admin, functions yet to be done. --> | <a href="./adm/">[ REAL ACP ] </a></menu>';
+echo '<br><!-- If user logged in and admin, functions yet to be done. --> | <a href="./adm/">[ REAL ACP ] </a>';
 echo '<a href="shopUsers.php">[ shopUsers.php ] </a></menu>';
 		// Notice: Undefined index: page in /home/peetra/public_html/shop/menu.php on line 13
         switch(@$_GET['page'])
@@ -54,5 +52,6 @@ echo '<a href="shopUsers.php">[ shopUsers.php ] </a></menu>';
 				echo 'HÄÄ-HÄÄ - default:No page indexed - HÄÄ-HÄÄ';
 		}
 		        mysql_free_result($result);
+where_am_i('','shopOverall');
 
 ?>
