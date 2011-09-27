@@ -1,16 +1,12 @@
-<?php // . $lang[''] .
+<?php // . $lang['English'] .
 
 // Go away if LANG is not defined.
 if (!defined('LANG'))
-{
 	exit;
-}
 
 // If there is no $lang defined AND it's not an array, let us make it one.
 if (empty($lang) || !is_array($lang))
-{
 	$lang = array();
-}
 
 // Take $lang and add the language specific elements to get localized content.
 $lang = array_merge($lang, array(
@@ -22,8 +18,14 @@ $lang = array_merge($lang, array(
 	'SHOP_FRONTEND'		=> 'Go to the frontend of your shop',
 	'KEYWORDS'		=> 'Shop online in Finland, assecoaries, leather, gifts, gizmo, girlpower',
 	'METALANG'		=> 'en', // FI SV
+	'DESC'		=> 'Wonderful handcraft in leather from Finland',
+	'TITLE'		=> 'Site title shuldn\'t be in lang file...',
+	'TEST'		=> 'ENG test',
+	'ENGLISH'		=> 'Use shop in English',
+	'SWEDISH'		=> 'Använd shoppen på svenska',
+	'FINNISH'		=> 'Käytä kauppa suomeksi',
 	''		=> '',
-	// top menu
+	// top menu, ACP
 	'ACP_INDEX'		=> 'ACP Index',
 	'PAGES'		=> 'Pages',
 	'PRODUCTS'	=> 'Products',
@@ -78,7 +80,7 @@ $lang = array_merge($lang, array(
 	'STREET ADDRESS'		=> 'Street address',
 	'ZIP'		=> 'Zip code',
 	'CITY'		=> 'City',
-//	'COUNTRY'		=> 'Country',
+	'COUNTRY'		=> 'Country', // Not included yet
 	'PHONE'		=> 'Phone number',
 	'EMAIL'		=> 'E-mail address',
 	'PASSWORD'		=> 'Password',
@@ -95,7 +97,6 @@ $lang = array_merge($lang, array(
 	'DEL_USER'		=> 'Delete user',
 	'DEL_USER_EXPLAIN'		=> 'Click a user to delete. This can not be undone',
 	'DEL_USER_REALLY'		=> 'Are you sure, deleting user',
-	''		=> '',
 	''		=> '',
 	''		=> '',
 	''		=> '',

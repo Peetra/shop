@@ -1,7 +1,4 @@
 <?php
-spellit('foo');
-where_am_i('', '');
-
 function spellit($spellit)
 {
 	echo $spellit;

@@ -1,10 +1,12 @@
 <?php
-if(!defined('LANG')){ exit; }
+if(!defined('LANG'))
+	exit;
+	
 function search_user_form($lang,$searchuser)
 {
 	global $lang;
 	?>
-		<div class="per75"><fieldset class="pages">
+		<div class="per85"><fieldset class="pages">
 			<legend><?=$lang['SEARCH_USER']?></legend>
 				<form method="get" action="">
 					<p>Give user name</p>
