@@ -7,21 +7,11 @@ $lname = (isset($_GET['lname'])) ? $_GET['lname'] : '';
 $sql = "DELETE FROM {$prefix}customers WHERE uID = '$uID'";
 $really = $lang['DEL_USER_REALLY'] . ' '; // defining the lang string for the js-code here
 mysql_query($sql);
+
+/*********** problem starts *********/
 $searchuser = (isset($_GET['searchuser'])) ? $_GET['searchuser'] : '';
 if ($searchuser == '')
-{
-?>
-	<fieldset class="pages">
-		<legend><?=$lang['DEL_USER']?></legend>
-			<form method="get" action="">
-				<p>Give user name</p>
-				<p><input type="text" name="searchuser" value="<?=$searchuser?>">
-					<input type="submit" name="send">
-					<input type="reset">
-			</form>
-	</fieldset>
-<?
-}
+	search_user_form('SEARCH_USER', ''); // This is a function, it won't keep the lang-index together.
 else
 {
 ?>
@@ -46,7 +36,7 @@ else
 		</span>
 	 </ul>
 	  	<fieldset class="pages">
-		<legend><?=$lang['DEL_USER']?></legend>
+		<legend><?=$lang['SEARCH_USER']?></legend>
 			<form method="get" action="">
 				<p>Give user name</p>
 				<p><input type="text" name="searchuser" value="<?=$searchuser?>">
