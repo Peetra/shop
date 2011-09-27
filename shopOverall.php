@@ -28,7 +28,7 @@ echo '<menu>';
 			if (!$row->prio==0)
 			  echo '<a href="index.php?page=' . $row->pID . '">' . $row->pagename. '</a> ';
 		}
-echo '<!-- If user logged in and admin, functions yet to be done. --> | <a href="./adm/">[ REAL ACP ] </a></menu>';
+echo '<br><!-- If user logged in and admin, functions yet to be done. --> | <a href="./adm/">[ REAL ACP ] </a></menu>';
 echo '<a href="shopUsers.php">[ shopUsers.php ] </a></menu>';
 		// Notice: Undefined index: page in /home/peetra/public_html/shop/menu.php on line 13
         switch(@$_GET['page'])
