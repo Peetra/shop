@@ -8,43 +8,37 @@ $sql = "DELETE FROM {$prefix}customers WHERE uID = '$uID'";
 $really = $lang['DEL_USER_REALLY'] . ' '; // defining the lang string for the js-code here
 mysql_query($sql);
 
-/*********** problem starts *********/
 $searchuser = (isset($_GET['searchuser'])) ? $_GET['searchuser'] : '';
+// $wildcard = array('?', '*');
+// $searchuser = str_replace($wildcard, "\%", "\%");
 if ($searchuser == '')
-	search_user_form('SEARCH_USER', ''); // This is a function, it won't keep the lang-index together.
+	search_user_form('SEARCH_USER', '');
 else
 {
 ?>
-	<h3 class="pages"><?= $lang['DEL_USER']?></h3>
-	  <p class="pages"><?= $lang['DEL_USER_EXPLAIN']?>.</p>
-	  <ul>
-		<span class="per85">
-	<?
-			$sql = "SELECT * FROM {$prefix}customers WHERE lname LIKE '%{$searchuser}%' ORDER BY uID ASC";
-			$result = mysql_query($sql);
-			while($row=mysql_fetch_object($result))
-			{
-			  echo "<li class=\"pages\"><a href=\"./usersDelete.php?uID=" . $row->uID .
-			  "&amp;lname=" . $row->lname .
-			  '"onclick="return confirm(\'' . $really, $row->lname . '?\');">';
-			  echo $row->uID . ' ' . $row->lname. '</a></li>';
+<h3 class="pages"><?= $lang['DEL_USER']?></h3>
+  <p class="pages"><?= $lang['DEL_USER_EXPLAIN']?>.</p>
+  <ul>
+	<span class="per85">
+<?
+		$sql = "SELECT * FROM {$prefix}customers WHERE lname LIKE '%{$searchuser}%' OR fname LIKE '%{$searchuser}%' 
+													OR street LIKE '%{$searchuser}%' OR city LIKE '%{$searchuser}%' OR zip LIKE '%{$searchuser}%'
+													OR phone LIKE '%{$searchuser}%' OR email LIKE '%{$searchuser}%'	ORDER BY uID ASC";
+		$result = mysql_query($sql);
+		while($row=mysql_fetch_object($result))
+		{
+		  echo "<li class=\"pages\"><a href=\"./usersDelete.php?uID=" . $row->uID .
+		  "&amp;lname=" . $row->lname .
+		  '"onclick="return confirm(\'' . $really, $row->lname . '?\');">';
+		  echo $row->uID . ' ' . $row->lname. ' ' . $row->fname. '</a></li>';
 
-		  echo "\n";
-			}
-	mysql_free_result($result);
-	?>
-		</span>
-	 </ul>
-	  	<fieldset class="pages">
-		<legend><?=$lang['SEARCH_USER']?></legend>
-			<form method="get" action="">
-				<p>Give user name</p>
-				<p><input type="text" name="searchuser" value="<?=$searchuser?>">
-					<input type="submit" name="send">
-					<input type="reset">
-			</form>
-	</fieldset>
-<?php
+	  echo "\n";
+		}
+mysql_free_result($result);
+?>
+	</span>
+<?
+	search_user_form('SEARCH_USER', '');
 }
 // Close db-connection
 mysql_close($connection);

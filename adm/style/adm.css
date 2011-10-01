@@ -1,7 +1,7 @@
 /* Stylesheet for shop administration. */
 
 body {
-	background-color: #C1D7BB;
+	background: url(img/bg.png) repeat;
 	color: #141012;
 	font-family: Arial;
 }
@@ -11,9 +11,9 @@ img.goto-start {
 	-moz-border-radius: 5px;/* round corners in Firefox */
 }
 img.goto-shop {
-	margin: -330px 0 0 550px;
+	margin: -328px 0 0 550px;
 	width:110px;
-	height:110px;
+	height:112px;
 	-moz-border-radius: 5px;/* round corners in Firefox */
 }
 
@@ -53,10 +53,7 @@ menu.main {
 h3.pages{
 	margin-top: -70px;
 }
-.per75 {
-	font-size: 75%;
-	color: #191919;
-}
+
 legend {
 	font-size: 108%;
 	color: #191919;
@@ -65,6 +62,11 @@ legend {
 
 fieldset {
 	display: inline-block;
+}
+
+.per75 {
+	font-size: 75%;
+	color: #191919;
 }
 .per85 {
 	font-size: 85%;

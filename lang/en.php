@@ -41,6 +41,7 @@ $lang = array_merge($lang, array(
 	// top menu, ACP
 	'ACP_INDEX'		=> 'ACP Index',
 	'PAGES'		=> 'Pages',
+	'ORDERS'			=> 'Orders',
 	'PRODUCTS'	=> 'Products',
 	'USERS'		=> 'Users',
 	// Products
@@ -104,6 +105,7 @@ $lang = array_merge($lang, array(
 	''		=> '',
 	''		=> '',
 	'SEARCH_USER'		=> 'Search user',
+	'SEARCH_USER_EXPLAIN'		=> 'Search by name or adress. Use %,* OR ? as wildcards.',
 	''		=> '',
 	''		=> '',
 	''		=> '',
