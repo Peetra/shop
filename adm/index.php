@@ -41,7 +41,7 @@ if ($ind == 'ind')
 
 							  Hide product
 
-		 Open orders			Hide page
+		 Open orders			
 
 								   Close shop</pre>
 	<?
