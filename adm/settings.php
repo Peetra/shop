@@ -31,8 +31,5 @@ $sql = "ALTER TABLE `194D_shop_settings` CHANGE `tracker` `tracker` VARCHAR(2000
 		</div>
 	</form>
 <?php
-if (basename($who_am_i, ".php") == 'settings') // basename returns the end of a path, here we exclude the fileextension
-{
-	include ('./style/footer.html');
-}
+where_is_adm('', 'groups');
 ?>

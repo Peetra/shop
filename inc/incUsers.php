@@ -1,29 +1,32 @@
-<?php
-	$uID = (isset($_POST['uID'])) ? (int) $_POST['uID'] : 0;
+<?php 
+if(!defined('LANG'))
+	exit;
+global $lang;
+$uID = (isset($_POST['uID'])) ? (int) $_POST['uID'] : 0;
 
-	$fname = (isset($_POST['fname']) ? $_POST['fname'] : '');
-	$fname = mysql_real_escape_string(ucfirst($fname));
+$fname = (isset($_POST['fname']) ? $_POST['fname'] : '');
+$fname = mysql_real_escape_string(ucfirst($fname));
 
 
-	$lname = (isset($_POST['lname'])? $_POST['lname'] : '');
-	$lname= mysql_real_escape_string(ucfirst($lname));
+$lname = (isset($_POST['lname'])? $_POST['lname'] : '');
+$lname= mysql_real_escape_string(ucfirst($lname));
 
-	$street = (isset($_POST['street'])? $_POST['street'] : '');
-	$street = mysql_real_escape_string($street);
+$street = (isset($_POST['street'])? $_POST['street'] : '');
+$street = mysql_real_escape_string($street);
 
-	$zip = (isset($_POST['zip'])) ? (int) $_POST['zip'] : '';
+$zip = (isset($_POST['zip'])) ? (int) $_POST['zip'] : '';
 
-	$city = (isset($_POST['city'])? $_POST['city'] : '');
-	$city = mysql_real_escape_string(ucfirst($city));
+$city = (isset($_POST['city'])? $_POST['city'] : '');
+$city = mysql_real_escape_string(ucfirst($city));
 
-	$phone = (isset($_POST['phone'])? $_POST['phone'] : '');
-	$phone = mysql_real_escape_string($phone);
+$phone = (isset($_POST['phone'])? $_POST['phone'] : '');
+$phone = mysql_real_escape_string($phone);
 
-	$email = (isset($_POST['email'])? $_POST['email'] : '');
-	$email = mysql_real_escape_string($email);
+$email = (isset($_POST['email'])? $_POST['email'] : '');
+$email = mysql_real_escape_string($email);
 
-	$password = (isset($_POST['password'])? $_POST['password'] : '');
-	$password = mysql_real_escape_string($password);
+$password = (isset($_POST['password'])? $_POST['password'] : '');
+$password = mysql_real_escape_string($password);
 
 ?>
 <h3><?=$lang['REGISTER'];?></h3>

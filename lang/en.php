@@ -112,9 +112,11 @@ $lang = array_merge($lang, array(
 	'DEL_USER'		=> 'Delete user',
 	'DEL_USER_EXPLAIN'		=> 'Click a user to delete. This can not be undone',
 	'DEL_USER_REALLY'		=> 'Are you sure, deleting user',
-	''		=> '',
-	''		=> '',
-	''		=> '',
+	
+	// Products, productgroups
+	'GROUPS_TITLE'		=> 'Product groups',
+	'GROUPS_EXPLAIN'		=> 'Here you can manage groups for your shop items',
+	'MANAGE_GROUPS'		=> 'Manage groups',
 	''		=> '',
 	''		=> '',
 	''		=> '',

@@ -1,6 +1,8 @@
 <?php // adm/index.php [Administration Control Panel]
 error_reporting(E_ALL);
 include('../connection.php'); // You see the two dots for going up a directory
+/* not needed yet
+include('../inc/shopFunctions.php'); */
 define('LANG', true); // The user doesn't get anywhere w/o words in the interface. :P
 if (!empty($_GET['lang']))
 {

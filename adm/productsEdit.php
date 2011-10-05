@@ -1,10 +1,5 @@
 <?php
-
-
-
 //******* Thought I modify from pagesEdit, but, mm, I'll see **************//
-
-
 
 error_reporting(E_ALL);
 $who_am_i = $_SERVER['PHP_SELF'];
@@ -59,5 +54,4 @@ mysql_free_result($result);
       <p><input type="submit" name="send"></p>
 </form>
 <?
-if (basename($who_am_i, ".php") == 'productsEdit')
-	include ('./style/footer.html');
+where_is_adm('', 'productsEdit');

@@ -63,5 +63,4 @@ if ($pID != 0)
 </form>	</fieldset>
 <?
 }
-if (basename($who_am_i, ".php") == 'pagesEdit')
-	include ('./style/footer.html');
+where_is_adm('', 'pagesEdit');

@@ -65,4 +65,4 @@ if ($pagename != '')
 </table>
 </form>
 <?php
-include ('./style/footer.html');
+where_is_adm('', 'pagesAdd');

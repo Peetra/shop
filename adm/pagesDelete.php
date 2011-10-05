@@ -33,4 +33,5 @@ mysql_free_result($result);
 <?php
 // Close db-connection
 mysql_close($connection);
+where_is_adm('', 'pagesDelete')
 ?>
