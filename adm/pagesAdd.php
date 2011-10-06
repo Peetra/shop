@@ -54,7 +54,7 @@ if ($pagename != '')
 	<td><?= $lang['PAGE_META']?><br><span class="per75"><?= $lang['PAGE_META_EXPLAIN']?></span>
 	<td><input type="text" name="headline">
 <tr>
-	<td><?= $lang['PAGE_DESC']?><br><span class="per75"><?= $lang['PAGE_DESC_EXPLAIN']?></span>
+	<td><?= $lang['DESC']?><br><span class="per75"><?= $lang['PAGE_DESC_EXPLAIN']?></span>
 	<td><input type="text" name="desk">
 <tr>
 	<td><?= $lang['PAGE_POSITION']?><br><span class="per75"><?= $lang['PAGE_POSITION_EXPLAIN']?></span>

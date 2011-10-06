@@ -51,7 +51,7 @@ if ($pID != 0)
 	<td><?= $lang['PAGE_META']?></td>
 	<td><input type="text" name="headline" size="33"  value="<?= $headline; ?>"></td>
     <tr>
-	<td><?= $lang['PAGE_DESC']?><br><span class="per75"><?= $lang['PAGE_DESC_EXPLAIN']?></span></td>
+	<td><?= $lang['DESC']?><br><span class="per75"><?= $lang['PAGE_DESC_EXPLAIN']?></span></td>
 	<td><textarea name="desk" cols="33"	rows="3"><?= $desk; ?></textarea></td>
     <tr>
 	<td><?= $lang['PAGE_POSITION']?><br><span class="per85"><?= $lang['PAGE_POSITION_EXPLAIN']?></span></td>

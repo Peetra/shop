@@ -15,7 +15,24 @@ $group_name = ucfirst($group_name);
 $group_exp = (isset($_GET['group_exp'])) ? $_GET['group_exp'] : '';
 $group_exp = strip_tags($group_exp);
 ?>
+<!--Edit group -->
 <div class="groups">
+<h3><?= $lang['EDIT_GROUP'];?></h3>
+<form method="get" action="">
+<input type="hidden" name="gID" value="<?=$gID?>">
+<p><?= $lang['NAME_GROUP'];?>
+<input type="text" name="group_name" value="<?=$group_name?>">
+<?= $lang['DESC'];?>
+<input type="text" name="group_exp" value="<?=$group_exp?>">
+	<input type="submit" name="laheta">
+	<input type="reset"></p>
+</div>
+<?	$sql = "UPDATE {$prefix}groups
+		SET gID='$gID', group_name='$group_name', group_exp='$group_exp'
+		WHERE gID = '$gID'";
+mysql_query($sql);
+?>
+<div class="pages">
 <?= $lang['GROUPS_TITLE'];?><br>
 <?php        $sql = "SELECT * FROM {$prefix}groups";
         $result = mysql_query($sql);
@@ -29,26 +46,7 @@ $group_exp = strip_tags($group_exp);
         }
         echo '</div>';
         mysql_free_result($result);
-?>
-<!-- Add groupname -->
-<div class="pages">
-<h3 >add group</h3>
-<form method="get" action="">
-<p><?= $lang['NAME_GROUP'];?>
-<input type="text" name="group_name" value="<?=$group_name?>">
-<?= $lang['DESC'];?>
-<input type="text" name="group_exp" value="<?=$group_exp?>">
-	<input type="submit" name="laheta">
-	<input type="reset"></p>
-</div>
-<?php
-
-if ($gID == '' && $group_name != '')
-{
-	$sql = "INSERT INTO {$prefix}groups (gID, group_name, group_exp)
-                        VALUES ('', '$group_name', '$group_exp')";
-}
-mysql_query($sql);	                      
+                      
 // edit group
 // delete group
 
