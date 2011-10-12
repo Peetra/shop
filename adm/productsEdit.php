@@ -5,29 +5,29 @@ error_reporting(E_ALL);
 $who_am_i = $_SERVER['PHP_SELF'];
 if (basename($who_am_i, ".php") != 'products')
 	include ('./products.php');
-$pID = 		(isset($_GET['pID'])) ? (int) $_GET['pID'] : 0;
-$pagename = (isset($_GET['pagename'])) ? $_GET['pagename'] : '';
-$pagename = strip_tags($pagename);
-$pagename = ucfirst($pagename);
-$headline = (isset($_GET['headline'])) ? $_GET['headline'] : '';
-$desk = 	(isset($_GET['desk'])) ? $_GET['desk'] : '';
-$prio = 		(isset($_GET['prio'])) ? (int) $_GET['prio'] : 0;
+$iID = 		(isset($_GET['iID'])) ? (int) $_GET['iID'] : 0;
+$productname = (isset($_GET['productname'])) ? $_GET['productname'] : '';
+$productname = strip_tags($productname);
+$productname = ucfirst($productname);
+$productdesc = (isset($_GET['productdesc'])) ? $_GET['productdesc'] : '';
+$color = 	(isset($_GET['color'])) ? $_GET['color'] : '';
+$price = 		(isset($_GET['price'])) ? (int) $_GET['price'] : 0;
 /* Takes the value that user inserts into $variables and SETs UPDATED values in cells */
-$sql = "UPDATE {$prefix}products
-		SET pagename = '$pagename', desk = '$desk', headline = '$headline', prio = '$prio'
-		WHERE pID = '$pID'";
+$sql = "UPDATE {$prefix}items
+		SET productname = '$productname', color = '$color', productdesc = '$productdesc', price = '$price'
+		WHERE iID = '$iID'";
 mysql_query($sql);
 ?>
-  <h3 class="products"><?= $lang['CHANGE_PAGE_DETAILS']?></h3>
+  <h3 class="products"><?= $lang['CHANGE_PRODUCT_DETAILS']?></h3>
   <ul>
 <?		// List products for easy access by clicking
-        $sql = "SELECT * FROM {$prefix}products ORDER BY prio ASC";
+        $sql = "SELECT * FROM {$prefix}products ORDER BY price ASC";
         $result = mysql_query($sql);
         while($row=mysql_fetch_object($result))
         {
-          echo "<li class=\"products\"><a href=\"./productsEdit.php?pID=" . $row->pID . "&amp;pagename=" . $row->pagename . "&amp;desk=" . $row->desk . "&amp;headline=" . $row->headline . "&amp;prio=" . $row->prio . "\">";
-          echo $row->pID . ' ' . $row->pagename. '</a></li>';
-	//  echo '<p>' . $row->desk . '</p>';
+          echo "<li class=\"products\"><a href=\"./productsEdit.php?iID=" . $row->iID . "&amp;productname=" . $row->productname . "&amp;color=" . $row->color . "&amp;productdesc=" . $row->productdesc . "&amp;price=" . $row->price . "\">";
+          echo $row->iID . ' ' . $row->productname. '</a></li>';
+	//  echo '<p>' . $row->color . '</p>';
         }
 mysql_free_result($result);
 ?>
@@ -35,20 +35,20 @@ mysql_free_result($result);
 <form method="get" action="">
   <table>
     <tr>
-	<td><?= $lang['PAGE_ID']?></td>
-	<td><input type="text" name="pID" readonly value="<?= $pID; ?>"></td>
+	<td><?= $lang['PRODUCT_ID']?></td>
+	<td><input type="text" name="iID" readonly value="<?= $iID; ?>"></td>
     <tr>
 	<td><?= $lang['CHANGE_PAGE']?></td>
-	<td><input type="text" name="pagename" value="<?= $pagename; ?>"></td>
+	<td><input type="text" name="productname" value="<?= $productname; ?>"></td>
     <tr>
-	<td><?= $lang['PAGE_META']?></td>
-	<td><input type="text" name="headline" value="<?= $headline; ?>"></td>
+	<td><?= $lang['PRODUCT_META']?></td>
+	<td><input type="text" name="productdesc" value="<?= $productdesc; ?>"></td>
     <tr>
-	<td><?= $lang['PAGE_DESC']?></td>
-	<td><input type="text" name="desk" size="57" value="<?= $desk; ?>"></td>
+	<td><?= $lang['PRODUCT_DESC']?></td>
+	<td><input type="text" name="color" size="57" value="<?= $color; ?>"></td>
     <tr>
-	<td><?= $lang['PAGE_POSITION']?><br><small><?= $lang['PAGE_POSITION_EXPLAIN']?></small></td>
-	<td><input type="text" name="prio" value="<?= $prio; ?>"></td>
+	<td><?= $lang['PRODUCT_POSITION']?><br><small><?= $lang['PRODUCT_POSITION_EXPLAIN']?></small></td>
+	<td><input type="text" name="price" value="<?= $price; ?>"></td>
   </table>
   <!-- FIX THIS!!-->
       <p><input type="submit" name="send"></p>

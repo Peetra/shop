@@ -114,6 +114,10 @@ $lang = array_merge($lang, array(
 	'DEL_USER_REALLY'		=> 'Are you sure, deleting user',
 	
 	// Products, productgroups
+	'EDIT_PRODUCT'		=> 'Change product',
+	'NEW_PRODUCT'		=> 'Add product',
+	'DEL_PRODUCT'		=> 'Delete product',	
+	
 	'GROUPS_TITLE'		=> 'Product groups',
 	'GROUPS_EXPLAIN'		=> 'Here you can manage groups for your shop items',
 	'MANAGE_GROUPS'		=> 'Manage groups',

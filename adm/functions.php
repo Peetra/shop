@@ -6,7 +6,7 @@ function search_user_form($lang,$searchuser)
 {
 	global $lang;
 	?>
-		<div class="per85"><fieldset class="pages">
+		<div class="per85"><fieldset class="products">
 			<legend><?=$lang['SEARCH_USER']?></legend>
 				<form method="get" action="">
 					<p><?=$lang['SEARCH_USER_EXPLAIN']?></p>
@@ -23,9 +23,9 @@ function item_menu()
 ?>
 	<div id="sidemenu">
 	<ul>
-	<li><a href="./pagesEdit.php"><?= $lang['EDIT_PAGE']?></a></li>
-	<li><a href="./pagesAdd.php"> <?= $lang['NEW_PAGE']?></a></li>
-	<li><a href="./pagesDelete.php"><?= $lang['DEL_PAGE']?></a></li>
+	<li><a href="./productsEdit.php"><?= $lang['EDIT_PRODUCT']?></a></li>
+	<li><a href="./productsAdd.php"> <?= $lang['NEW_PRODUCT']?></a></li>
+	<li><a href="./productsDelete.php"><?= $lang['DEL_PRODUCT']?></a></li>
 	<li><a href="./groups.php"><?= $lang['MANAGE_GROUPS']?></a></li>
 	</ul>
 	</div>
