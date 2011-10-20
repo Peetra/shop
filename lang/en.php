@@ -82,6 +82,8 @@ $lang = array_merge($lang, array(
 	'PAGE_ID'		=> 'Page ID',
 	'PAGE_META'		=> 'Title',
 	'PAGE_META_EXPLAIN'		=> '(used in meta and mouseover)', // not implemented yet Sept 23 2011
+	'CONT'		=> 'Page Content',
+	'PAGE_CONT_EXPLAIN'		=> 'All that will be shown on the page',
 	'PAGE_POSITION'		=> 'Page position',
 	'PAGE_POSITION_EXPLAIN'		=> 'The menu is ordered by this number,<br />set to 0 to hide page from frontend menu.',
 
@@ -110,7 +112,7 @@ $lang = array_merge($lang, array(
 	'DEL_USER'		=> 'Delete user',
 	'DEL_USER_EXPLAIN'		=> 'Click a user to delete. This can not be undone',
 	'DEL_USER_REALLY'		=> 'Are you sure, deleting user',
-	
+
 	// Products, productgroups
 	'EDIT_PRODUCT'		=> 'Change product',
 	'NEW_PRODUCT'		=> 'Add product',
@@ -121,7 +123,7 @@ $lang = array_merge($lang, array(
 	'PRODUCT_META'		=> '',
 	'PRODUCT_COLOR'		=> '',''		=> '',
 	'PRODUCT_PRICE'		=> '',
-	''		=> '',	
+	''		=> '',
 	''		=> '',
 	''		=> '',
 	''		=> '',

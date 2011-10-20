@@ -8,6 +8,7 @@ $pagename = (isset($_GET['pagename'])) ? $_GET['pagename'] : '';
 $pagename = strip_tags($pagename);
 $pagename = ucfirst($pagename);
 $headline = (isset($_GET['headline'])) ? $_GET['headline'] : '';
+$content = (isset($_GET['content'])) ? $_GET['content'] : '';
 $desk = strip_tags((isset($_GET['desk'])) ? $_GET['desk'] : '');
 // $desk = 	(isset($_GET['desk'])) ? $_GET['desk'] : '';
 $prio = 		(isset($_GET['prio'])) ? (int) $_GET['prio'] : 0;
@@ -36,8 +37,8 @@ while($row=mysql_fetch_object($result))
   // desc was not available in mysql, therefor desk for description.
 if ($pagename != '')
 {
-  $sql = "INSERT INTO {$prefix}pages (pagename, headline, desk, prio)
-					  VALUES ('$pagename', '$headline', '$desk', $prio)";
+  $sql = "INSERT INTO {$prefix}pages (pagename, headline, content, desk, prio)
+					  VALUES ('$pagename', '$headline', '$content', '$desk', $prio)";
   mysql_query($sql);
 }
   mysql_free_result($result);
@@ -53,6 +54,9 @@ if ($pagename != '')
 <tr>
 	<td><?= $lang['PAGE_META']?><br><span class="per75"><?= $lang['PAGE_META_EXPLAIN']?></span>
 	<td><input type="text" name="headline">
+<tr>
+	<td><?= $lang['CONT']?><br><span class="per75"><?= $lang['PAGE_CONT_EXPLAIN']?></span></td>
+	<td><textarea name="content" cols="100"	rows="10"><?= $content; ?></textarea></td>
 <tr>
 	<td><?= $lang['DESC']?><br><span class="per75"><?= $lang['PAGE_DESC_EXPLAIN']?></span>
 	<td><input type="text" name="desk">
