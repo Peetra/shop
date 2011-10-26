@@ -19,14 +19,14 @@ $sql = "UPDATE {$prefix}items
 		WHERE iID = '$iID'";
 mysql_query($sql);
 ?>
-  <h3 class="products"><?= $lang['CHANGE_PRODUCT_DETAILS']?></h3>
+  <h3 class="pages"><?= $lang['CHANGE_PRODUCT_DETAILS']?></h3>
   <ul>
 <?		// List products for easy access by clicking
         $sql = "SELECT * FROM {$prefix}items ORDER BY price ASC";
         $result = mysql_query($sql);
         while($row=mysql_fetch_object($result))
         {
-          echo "<li class=\"products\"><a href=\"./productsEdit.php?iID=" . $row->iID . "&amp;productname=" . $row->productname . "&amp;color=" . $row->color . "&amp;productdesc=" . $row->productdesc . "&amp;price=" . $row->price . "\">";
+          echo "<li class=\"pages\"><a href=\"./productsEdit.php?iID=" . $row->iID . "&amp;productname=" . $row->productname . "&amp;color=" . $row->color . "&amp;productdesc=" . $row->productdesc . "&amp;price=" . $row->price . "\">";
           echo $row->iID . ' ' . $row->productname. '</a></li>';
         }
 mysql_free_result($result);
@@ -34,7 +34,7 @@ mysql_free_result($result);
 ?>
   </ul>
 <form method="get" action="">
-  <table>
+  <table class="pages">
     <tr>
 	<td><?= $lang['PRODUCT_ID']?></td>
 	<td><input type="text" name="iID" readonly value="<?= $iID; ?>"></td>
@@ -45,17 +45,17 @@ mysql_free_result($result);
 	<td><?= $lang['CHANGE_PRODUCTNAME']?></td>
 	<td><input type="text" name="productname" value="<?= $productname; ?>"></td>
     <tr>
-	<td><?= $lang['PRODUCT_META']?></td>
+	<td><?= $lang['DESC']?></td>
 	<td><input type="text" name="productdesc" value="<?= $productdesc; ?>"></td>
     <tr>
 	<td><?= $lang['PRODUCT_COLOR']?></td>
-	<td><input type="text" name="color" size="57" value="<?= $color; ?>"></td>
+	<td><input type="text" name="color" value="<?= $color; ?>"></td>
     <tr>
 	<td><?= $lang['PRODUCT_PRICE']?></td>
 	<td><input type="text" name="price" value="<?= $price; ?>"></td>
+	<!-- FIX THIS!!-->
+	<td></td>    <td><input type="submit" name="send"></td>
   </table>
-  <!-- FIX THIS!!-->
-      <p><input type="submit" name="send"></p>
 </form>
 <?
 where_is_adm('', 'productsEdit');

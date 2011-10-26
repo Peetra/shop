@@ -3,7 +3,6 @@ error_reporting(E_ALL);
 
 include ('./products.php');
 include ('../connection.php');
-	include ('./products.php');
 $iID = 		(isset($_GET['iID'])) ? (int) $_GET['iID'] : 0;
 $gID = 		(isset($_GET['gID'])) ? (int) $_GET['gID'] : 0;
 $productname = (isset($_GET['productname'])) ? $_GET['productname'] : '';
@@ -17,23 +16,21 @@ $price = 		(isset($_GET['price'])) ? (int) $_GET['price'] : 0;
   $sql = "SELECT * FROM {$prefix}items ORDER BY iID ASC";
   $result = mysql_query($sql);
 ?>
-<h3 class="products"><?= $lang['ADD_PRODUCT']?></h3>
-	<table class="products">
-		<tr><td>pID<td>Price<td>Pagename
+<h3 class="pages"><?= $lang['ADD_PRODUCT']?></h3>
+	<table class="pages">
+		<tr><td>iID<td>Price<td>Productname
 
 <?
 while($row=mysql_fetch_object($result))
 {
-  echo '<tr	class="per85"><td>' . $row->pID . '<td>' . $row->price . '<td>';
-  echo $row->productname;
+  echo '<tr	class="per85"><td>' . $row->iID . '<td>' . $row->price . '<td>' . $row->productname;
 }
 ?>
 	</table>
 <?php
-  mysql_free_result($result);
 if ($productname != '')
 {
-  $sql = "INSERT INTO {$prefix}products (productname, productdesc, productdesc, color, price)
+  $sql = "INSERT INTO {$prefix}items (productname, gID, productdesc, color, price)
 					  VALUES ('$productname', '$productdesc', '$productdesc', ' $color', $price)";
   mysql_query($sql);
 }
@@ -43,16 +40,19 @@ if ($productname != '')
 </ul>
 <!-- Create new page html-->
 <form method="get" action="productsAdd.php">
-<table>
+<table class="pages">
 <tr>
-	<td> <?= $lang['NEW_PRODUCT_']?><br><span class="per75"><?= $lang['NEW_PRODUCT_EXPLAIN']?></span>
+	<td> <?= $lang['NEW_PRODUCT']?><br><span class="per75"><?= $lang['NEW_PRODUCT_EXPLAIN']?></span>
 	<td><input type="text" name="productname" required >
 <tr>
-	<td><?= $lang['PRODUCT_META']?><br><span class="per75"><?= $lang['PRODUCT_META_EXPLAIN']?></span>
-	<td><input type="text" name="productdesc">
+	<td><?= $lang['PRODUCT_GID']?><br><span class="per75"><?= $lang['PRODUCT_GID_EXPLAIN']?></span>
+	<td><input type="text" name="gID">
 <tr>
 	<td><?= $lang['DESC']?><br><span class="per75"><?= $lang['PRODUCT_DESC_EXPLAIN']?></span>
 	<td><input type="text" name="productdesc">
+<tr>
+	<td><?= $lang['PRODUCT_COLOR']?><br><span class="per75"><?= $lang['PRODUCT_COLOR_EXPLAIN']?></span>
+	<td><input type="text" name=color">
 <tr>
 	<td><?= $lang['PRODUCT_PRICE']?><br><span class="per75"><?= $lang['PRODUCT_PRICE_EXPLAIN']?></span>
 	<td><input type="text" name=price">
