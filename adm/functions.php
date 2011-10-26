@@ -6,7 +6,7 @@ function search_user_form($lang,$searchuser)
 {
 	global $lang;
 	?>
-		<div class="per85"><fieldset class="products">
+		<div class="per85"><fieldset class="pages">
 			<legend><?=$lang['SEARCH_USER']?></legend>
 				<form method="get" action="">
 					<p><?=$lang['SEARCH_USER_EXPLAIN']?></p>

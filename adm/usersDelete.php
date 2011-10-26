@@ -9,8 +9,6 @@ $really = $lang['DEL_USER_REALLY'] . ' '; // defining the lang string for the js
 mysql_query($sql);
 
 $searchuser = (isset($_GET['searchuser'])) ? $_GET['searchuser'] : '';
-// $wildcard = array('?', '*');
-// $searchuser = str_replace($wildcard, "\%", "\%");
 if ($searchuser == '')
 	search_user_form('SEARCH_USER', '');
 else

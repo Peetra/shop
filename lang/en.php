@@ -105,7 +105,7 @@ $lang = array_merge($lang, array(
 	''		=> '',
 
 	'SEARCH_USER'		=> 'Search user',
-	'SEARCH_USER_EXPLAIN'		=> 'Search by name or adress. Use %,* OR ? as wildcards.',
+	'SEARCH_USER_EXPLAIN'		=> 'Search by name or adress. The search function automagically uses wildcards.',
 	''		=> '',
 	''		=> '',
 	''		=> '',
