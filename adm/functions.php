@@ -22,12 +22,12 @@ function item_menu()
 	global $lang;
 ?>
 	<div id="sidemenu">
-	<ul>
-	<li><a href="./productsEdit.php"><?= $lang['EDIT_PRODUCT']?></a></li>
-	<li><a href="./productsAdd.php"> <?= $lang['NEW_PRODUCT']?></a></li>
-	<li><a href="./productsDelete.php"><?= $lang['DEL_PRODUCT']?></a></li>
-	<li><a href="./groups.php"><?= $lang['MANAGE_GROUPS']?></a></li>
-	</ul>
+		<ul>
+			<li><a href="./productsEdit.php"><?= $lang['EDIT_PRODUCT']?></a></li>
+			<li><a href="./productsAdd.php"> <?= $lang['NEW_PRODUCT']?></a></li>
+			<li><a href="./productsDelete.php"><?= $lang['DEL_PRODUCT']?></a></li>
+			<li><a href="./groups.php"><?= $lang['MANAGE_GROUPS']?></a></li>
+		</ul>
 	</div>
 <?php
 }
