@@ -1,4 +1,4 @@
-<?php // adm/user.php
+<?php // adm/pages.php
 
 // $ = (isset($_GET[''])) ? (int) $_GET[''] : 0;
 
