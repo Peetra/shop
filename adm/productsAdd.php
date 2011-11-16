@@ -39,7 +39,7 @@ if ($productname != '')
 ?>
 </ul>
 <!-- Create new page html-->
-<form method="get" action="productsAdd.php">
+<form method="get" enctype="multipart/form-data" action="productsAdd.php">
 <table class="pages">
 <tr>
 	<td> <?= $lang['NEW_PRODUCT']?><br><span class="per75"><?= $lang['NEW_PRODUCT_EXPLAIN']?></span>
@@ -56,6 +56,9 @@ if ($productname != '')
 <tr>
 	<td><?= $lang['PRODUCT_PRICE']?><br><span class="per75"><?= $lang['PRODUCT_PRICE_EXPLAIN']?></span>
 	<td><input type="text" name=price">
+<?
+include ('./upload.php');
+?>
 <tr>
 	<td><input type="submit" name="send">
 	<td><input type="reset">
