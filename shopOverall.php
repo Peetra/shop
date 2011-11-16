@@ -13,7 +13,7 @@ include('./lang/' . $lang . '.php');
 include('./connection.php');
 include('./inc/shopFunctions.php');
 where_am_i(('shopOverall' || 'index' || 'shopUsers'),'');
-echo '<div class="menu">';
+echo '<br><br><div class="menu">';
         $sql = "SELECT * FROM {$prefix}pages";
         $result = mysql_query($sql);
         while($row=mysql_fetch_object($result))
@@ -23,6 +23,9 @@ echo '<div class="menu">';
 		}
 echo '<br><!-- If user logged in and admin, functions yet to be done. --> | <a href="./adm/">[ REAL ACP ] </a>';
 echo '<a href="shopUsers.php">[ shopUsers.php ] </a></div>';
+
+echo '<img id="logo" src="styles/default/img/shop_logo.png">';
+
 echo $lang['TEST'] . '<br>';
 		// Notice: Undefined index: page in /home/peetra/public_html/shop/menu.php on line 13
         switch(@$_GET['page'])
