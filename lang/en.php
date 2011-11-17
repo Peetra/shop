@@ -141,7 +141,7 @@ $lang = array_merge($lang, array(
 	'NAME_GROUP'		=> 'Group name',
 	'EDIT_GROUP'		=> 'Change groupname or description.',
 	''		=> '',
-	''		=> '',
-	''		=> '',
+	'NEW_PIC'		=> 'Picture',
+	'NEW_PIC_EXPLAIN'		=> 'Upload a picture from your computer',
 ));
 ?>
