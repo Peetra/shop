@@ -14,7 +14,7 @@ include('./connection.php');
 include('./inc/shopFunctions.php');
 where_am_i(('shopOverall' || 'index' || 'shopUsers'),'');
 echo '<br><br><div class="menu">';
-        $sql = "SELECT * FROM {$prefix}pages";
+        $sql = "SELECT * FROM {$prefix}pages ORDER BY pID ASC ";
         $result = mysql_query($sql);
         while($row=mysql_fetch_object($result))
 		{
