@@ -1,5 +1,5 @@
 <?php
-define('LANG', true); // The user doesn't get anywhere w/o words in the interface. :P
+define('LANG', true); // The user doesn't get anywhere w/o words in the interface.			
 if (!empty($_GET['lang']))
 	$lang = $_GET['lang'];
 	else if (!empty($_COOKIE['lang']))
@@ -13,25 +13,15 @@ include('./lang/' . $lang . '.php');
 include('./connection.php');
 include('./inc/shopFunctions.php');
 where_am_i(('shopOverall' || 'index' || 'shopUsers'),'');
-echo '<br><br><div class="menu">';
-        $sql = "SELECT * FROM {$prefix}pages ORDER BY pID ASC ";
-        $result = mysql_query($sql);
-        while($row=mysql_fetch_object($result))
-		{
-			if (!$row->prio==0)
-			  echo '<a href="index.php?page=' . $row->pID . '">' . $row->pagename. '</a> ';
-		}
-echo '<br><!-- If user logged in and admin, functions yet to be done. --> | <a href="./adm/">[ REAL ACP ] </a>';
-echo '<a href="shopUsers.php">[ shopUsers.php ] </a></div>';
 
-echo '<img id="logo" src="styles/' . $style . '/img/shop_logo.png">';
+include('./styles/' . $style . '/menu.php');
 
 echo $lang['TEST'] . '<br>';
 		// Notice: Undefined index: page in /home/peetra/public_html/shop/menu.php on line 13
         switch(@$_GET['page'])
 		{
 			case 0:
-				echo 'case 0, hidden content - HÄÄ-HÄÄ';
+				echo 'case 0, gömt innehåll - HÄÄ-HÄÄ';
 				break;
 			case 1:
 			echo basename(__FILE__);
