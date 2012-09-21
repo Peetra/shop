@@ -15,5 +15,6 @@ if (empty($lang) || !is_array($lang))
 // Take $lang and add the language specific elements to get localized content.
 $lang = array_merge($lang, array(
 	'TEST'		=> 'tadaa -- suomi -- test',
+    'TITLE'     => 'Suomeksi',
 ));
 ?>

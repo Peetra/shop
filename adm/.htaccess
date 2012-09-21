@@ -1,0 +1,5 @@
+AuthName "Restricted"
+AuthType Basic
+AuthUserFile /home/peetra/.htpasswd
+AuthGroupFile /dev/null
+require valid-user

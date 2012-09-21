@@ -34,7 +34,7 @@ while($row=mysql_fetch_object($result))
 	  $result = mysql_query($sql);
 	  $row=mysql_fetch_object($result);
 		  $prio = $row->prio+1;
-  // desc was not available in mysql, therefor desk for description.
+  // desc was not available in mysql, therefore desk for description.
 if ($pagename != '')
 {
   $sql = "INSERT INTO {$prefix}pages (pagename, headline, content, desk, prio)

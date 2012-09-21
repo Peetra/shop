@@ -1,3 +1,28 @@
+
+*** These modified files were found in JOE when it aborted on Tue Aug 21 12:14:31 2012
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+USERS
+
+*** File '(Unnamed)'
+ht14.php
+ht16_strlen.php
+henk_tark.php
+menu.php
+jkl
+.htaccess
+.htaccess
+.htaccess
+.htaccess
+usersEdit.php
+en.php
+en.php
+
+*** These modified files were found in JOE when it aborted on Fri Aug 24 09:41:12 2012
+*** JOE was aborted because the terminal closed
+
+*** File 'en.php'
 <?php // . $lang['English'] .
 
 // Go away if LANG is not defined.
@@ -32,7 +57,7 @@ $lang = array_merge($lang, array(
 	'KEYWORDS'		=> 'Shop online in Finland, assecoaries, leather, gifts, gizmo, girlpower',
 	'METALANG'		=> 'en', // FI SV
 	'DESC'		=> 'Wonderful handcraft in leather from Finland',
-	'TITLE'		=> 'Site title shuldn\'t be in lang file...',
+	'TITLE'		=> 'Site title shouldn\'t be in lang file...',
 	'TEST'		=> 'ENG test',
 	'ENGLISH'		=> 'Use shop in English',
 	'SWEDISH'		=> 'Använd shoppen på svenska',
@@ -147,3 +172,20 @@ $lang = array_merge($lang, array(
 	'NEW_PIC_EXPLAIN'		=> 'Upload a picture from your computer',
 ));
 ?>
+
+*** File '(Unnamed)'
+uplo
+title
+
+*** File '(Unnamed)'
+usersEdit.php
+.bashrc
+usersAdd.php
+users.php
+footer.html
+usersEdit.php
+usersEdit.php
+usersAdd.php
+shopFunctions.php
+incUsers.php
+en.php

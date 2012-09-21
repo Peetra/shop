@@ -9,6 +9,7 @@ echo '<div id="acp-top-explanation"><h3>' . $lang['ACP_SETTINGS_TITLE'] . '</h3>
 echo '<p>' . $lang['ACP_SETTINGS_EXPLAIN'] . '</p></div>';
 //Showing as PHP code
 $sql = "ALTER TABLE `194D_shop_settings` CHANGE `tracker` `tracker` VARCHAR(2000) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL COMMENT \'Insert your analytics code here\', CHANGE `language` `language` TINYINT(2) NOT NULL, CHANGE `open` `open` TINYINT(1) NULL DEFAULT \'42\'";
+echo $sql;
 ?>
 	<div id="sidemenu">
 	<ul>

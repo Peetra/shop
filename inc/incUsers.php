@@ -29,7 +29,15 @@ $password = (isset($_POST['password'])? $_POST['password'] : '');
 $password = mysql_real_escape_string($password);
 
 ?>
-<h3><?=$lang['REGISTER'];?></h3>
+<h3>
+<?php
+if ($uedit == 7)
+{
+echo '<br><br><br><br><br><br><br>----------------------------------------boliboli';
+}
+else
+echo $lang['REGISTER'];
+?></h3>
 	<?$zip_lenght = strlen($zip);
 	if ($zip_lenght != 5 && (isset($_POST['zip'])))
 		echo '<span style="color:red">' . $lang['ZIP_ERROR'] . '</span>';?>

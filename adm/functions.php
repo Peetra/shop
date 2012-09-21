@@ -32,6 +32,23 @@ function item_menu()
 <?php
 }
 
+function users_menu()
+{
+	global $lang;
+?>
+<div id="sidemenu">
+    <ul>
+        <li><a href="./usersEdit.php"><?php echo $lang['USERS_EDIT']?></a></li>
+        <li><a href="./usersAdd.php"> <?php echo $lang['USERS_ADD']?></a></li>
+        <li><a href="./usersDelete.php"><?php echo $lang['USERS_DEL']?></a></li>
+    </ul>
+</div>
+<div>
+<?php
+}
+
+
+
 function where_is_adm($file_name, $file_name2)
 {
 	$who_am_i = $_SERVER['PHP_SELF'];
@@ -44,4 +61,5 @@ function where_is_adm($file_name, $file_name2)
 		}
 	elseif (basename($who_am_i, ".php") == $file_name2)
 			include ('./style/footer.html');
+			echo $who_am_i . ' AUgust 2012';
 }
