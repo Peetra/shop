@@ -1,10 +1,14 @@
 <?
 include ('users.php');
 ?>
-<br><br>
-<br><br>
+<div class="pages">
+<span class="per85">
 <?
-global $uedit;
 include ('../inc/shopFunctions.php');
 include ('../inc/incUsers.php');
+?>
+</span>
+</div>
+
+<?php
 where_is_adm('', 'usersAdd');

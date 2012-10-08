@@ -7,7 +7,6 @@ $uID = (isset($_POST['uID'])) ? (int) $_POST['uID'] : 0;
 $fname = (isset($_POST['fname']) ? $_POST['fname'] : '');
 $fname = mysql_real_escape_string(ucfirst($fname));
 
-
 $lname = (isset($_POST['lname'])? $_POST['lname'] : '');
 $lname= mysql_real_escape_string(ucfirst($lname));
 
@@ -31,11 +30,7 @@ $password = mysql_real_escape_string($password);
 ?>
 <h3>
 <?php
-if ($uedit == 7)
-{
-echo '<br><br><br><br><br><br><br>----------------------------------------boliboli';
-}
-else
+
 echo $lang['REGISTER'];
 ?></h3>
 	<?$zip_lenght = strlen($zip);

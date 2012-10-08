@@ -1,9 +1,6 @@
 <?php
-function spellit($spellit)
-{
-	echo $spellit;
-}
 
+// Check the filename currently in use
 function where_am_i($file_name, $file_name2)
 {
 	global $style;
