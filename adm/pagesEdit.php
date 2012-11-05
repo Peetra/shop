@@ -37,6 +37,7 @@ mysql_free_result($result);
 if ($pID != 0)
 {
 ?>	<!-- this fieldset/legend stuff is not any good option for IE9, shall reconsider -->
+		<!-- screw IE9, this backend is made for me. -->
 	<fieldset>
 		<legend><?= $lang['CHANGE_PAGE_DETAILS']?></legend>
 <form method="get" action="">

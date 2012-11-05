@@ -17,11 +17,10 @@ where_am_i(('shopOverall' || 'index' || 'shopUsers'),'');
 include('./styles/' . $style . '/menu.php');
 
 echo $lang['TEST'] . '<br>';
-		// Notice: Undefined index: page in /home/peetra/public_html/shop/menu.php on line 13
         switch(@$_GET['page'])
 		{
 			case 0:
-				echo 'case 0, gömt innehåll - HÄÄ-HÄÄ';
+				echo 'case 0,';
 				break;
 			case 1:
 			echo basename(__FILE__);
@@ -40,6 +39,27 @@ echo $lang['TEST'] . '<br>';
 				default:
 				echo 'HÄÄ-HÄÄ - default:No page indexed - HÄÄ-HÄÄ';
 		}
+		
+
+		
+// so... Let us show some user defined content here. 
+
+$page = (isset($_REQUEST['page'])) ? $_REQUEST['page'] : '0'; 
+
+echo '<p>';
+        $sql = "SELECT * FROM {$prefix}pages WHERE pID = $page";
+        $result = mysql_query($sql);
+        while($row=mysql_fetch_object($result))
+		{
+			if (!$row->prio==0) 
+			  echo ' X ' . $row->pagename . '<br>XXXX<br>' .  $page;
+			  // while($page=$row->pID)
+			  	echo $row->content;
+		}
+echo '</p>';
+
+
+
 		        mysql_free_result($result);
 where_am_i('','shopOverall');
 

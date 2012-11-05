@@ -13,7 +13,7 @@ $lname= mysql_real_escape_string(ucfirst($lname));
 $street = (isset($_POST['street'])? $_POST['street'] : '');
 $street = mysql_real_escape_string($street);
 
-$zip = (isset($_POST['zip'])) ? (int) $_POST['zip'] : '';
+$zip = (isset($_POST['zip'])) ? $_POST['zip'] : '';
 
 $city = (isset($_POST['city'])? $_POST['city'] : '');
 $city = mysql_real_escape_string(ucfirst($city));

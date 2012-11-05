@@ -11,5 +11,5 @@ echo '<br><br><div class="menu">';
 echo '<br><!-- If user logged in and admin, functions yet to be done. --> | <a href="./adm/">[ REAL ACP ] </a>';
 echo '<a href="shopUsers.php">[ shopUsers.php ] </a></div>';
 
-echo '<img id="logo" src="styles/' . $style . '/img/shop_logo.png">';
+echo '<img id="logo" src="styles/' . $style . '/img/shop_logo.png" alt="" >';
 ?>

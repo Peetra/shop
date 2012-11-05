@@ -4,13 +4,14 @@ List of software used in this project.
 - Komodo IDE
 - Gedit
 - Kate
+- Dreamveawer
+
+- phpMyAdmin
 
 - Nautilus file manager
-- Gnome desktop
-- KDE desktop
 - ubuntu CLI
 - GIMP image editor
-- LibreOfiice
-- OpenOffice
+- LibreOffice
 
-Develope platform github/ubuntu 11.04
+
+Develope platform github/ubuntu server
