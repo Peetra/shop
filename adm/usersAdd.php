@@ -10,5 +10,3 @@ include ('../inc/incUsers.php');
 </span>
 </div>
 
-<?php
-where_is_adm('', 'usersAdd');

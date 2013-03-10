@@ -12,6 +12,14 @@ $productdesc = (isset($_GET['productdesc'])) ? $_GET['productdesc'] : '';
 $color = 	(isset($_GET['color'])) ? $_GET['color'] : '';
 $price = 		(isset($_GET['price'])) ? (int) $_GET['price'] : 0;
 
+if ($productname != '')
+{
+  $sql = "INSERT INTO {$prefix}items (productname, gID, productdesc, color, price)
+					  VALUES ('$productname', '$productdesc', '$productdesc', ' $color', $price)";
+  mysql_query($sql);
+}
+  mysql_free_result($result);
+//mysql_close($connection);
   // the $prefix need {} around it to be read together with products as it should
   $sql = "SELECT * FROM {$prefix}items ORDER BY iID ASC";
   $result = mysql_query($sql);
@@ -26,19 +34,9 @@ while($row=mysql_fetch_object($result))
   echo '<tr	class="per85"><td>' . $row->iID . '<td>' . $row->price . '<td>' . $row->productname;
 }
 ?>
-	</table>
-<?php
-if ($productname != '')
-{
-  $sql = "INSERT INTO {$prefix}items (productname, gID, productdesc, color, price)
-					  VALUES ('$productname', '$productdesc', '$productdesc', ' $color', $price)";
-  mysql_query($sql);
-}
-  mysql_free_result($result);
-//mysql_close($connection);
-?>
+	</table><!--
 </ul>
-<!-- Create new page html-->
+<!-- Create new page html
 <form method="get" enctype="multipart/form-data" action="productsAdd.php">
 <table class="pages">
 <tr>
@@ -55,11 +53,11 @@ if ($productname != '')
 	<td><input type="text" name=color">
 <tr>
 	<td><?= $lang['PRODUCT_PRICE']?><br><span class="per75"><?= $lang['PRODUCT_PRICE_EXPLAIN']?></span>
-	<td><input type="text" name=price">
+	<td><input type="text" name=price" required >-->
 <?
 include ('./upload.php');
 ?>
-<tr>
+<!--<tr>
 	<td><input type="submit" name="send">
 	<td><input type="reset">
 </table>

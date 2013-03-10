@@ -1,5 +1,5 @@
 <?php
-/*History: I struggled a lot with this, before I finally noticed that I had this code snippet loadin too early. While placed wrong, he new Page was added to the dtabse, but didn't show up in the list after adding.  
+/*History: I struggled a lot with this, before I finally noticed that I had this code snippet loading too early. While placed wrong, the new Page was added to the dtabse, but didn't show up in the list after adding.  
  // the $prefix need {} around it to be read together with pages as it should
   $sql = "SELECT * FROM {$prefix}pages ORDER BY pagename ASC";
   $result = mysql_query($sql);

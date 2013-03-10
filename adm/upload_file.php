@@ -25,7 +25,7 @@
     else
       {
       move_uploaded_file($_FILES["file"]["tmp_name"],
-      "../uploads/" . $_FILES["file"]["name"]);
+      "/home/peetra/public_html/shop/uploads/" . $_FILES["file"]["name"]);
       echo "Stored in: " . "" . $_FILES["file"]["name"];
       }
     }

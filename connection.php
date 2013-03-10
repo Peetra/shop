@@ -1,4 +1,9 @@
 <?php
+/*
+Jussi Perkele, tästä aiheutui paljon ongelmia!
+$err = error_reporting(0);
+echo $err;
+*/
 include ('config.php');
 $connection = mysql_connect($server, $database, $password); 
 if (!$connection)
