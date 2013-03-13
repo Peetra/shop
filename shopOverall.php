@@ -25,7 +25,7 @@ echo $lang['TEST'] . '<br>';
 			case 1:
 			echo basename(__FILE__);
 			case 2:
-				// Just an exmple
+				// Just an exmple A YEAR LATER: UMMM, what was I testing here? Better leave it for now. 
 				$arr = explode('.', basename(__FILE__));
 				var_dump($arr[0]);
 				break;
@@ -39,9 +39,7 @@ echo $lang['TEST'] . '<br>';
 				default:
 				echo 'HÄÄ-HÄÄ - default:No page indexed - HÄÄ-HÄÄ';
 		}
-		
-
-		
+	
 // so... Let us show some user defined content here. 
 
 $page = (isset($_REQUEST['page'])) ? $_REQUEST['page'] : '0'; 
@@ -57,10 +55,7 @@ echo '<p>';
 			  	echo $row->content;
 		}
 echo '</p>';
-
-
-
-		        mysql_free_result($result);
+mysql_free_result($result);
 where_am_i('','shopOverall');
 
 ?>
