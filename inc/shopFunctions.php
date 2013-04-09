@@ -10,9 +10,9 @@ function where_am_i($file_name, $file_name2)
 			$title = ':)';
 			$desc = '';
 			$keywords = '';
-			include ('./styles/' . $style . '/header.html');
+			include ('./styles/' . $style . '/header.php');
 		}
 	elseif (basename($who_am_i, ".php") == $file_name2)
-			include ('./styles/' . $style . '/footer.html');
+			include ('./styles/' . $style . '/footer.php');
 }
 ?>

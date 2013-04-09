@@ -6,9 +6,9 @@ if(!defined('LANG'))
 <html lang="<?php echo $lang['METALANG'];?>" xml:lang="<?php echo $lang['METALANG'];?>">
 	<head>
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-		<!--<link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=latin-ext,latin' rel='stylesheet' type='text/css'>-->
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
 
-		<meta name="author" content="Petra Brandt &copy; 2011-2012">
+		<meta name="author" content="Petra Brandt &copy; 2011-2013">
   		<meta name="description" content="<?=$lang['DESC'];?>">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="keywords" content="<?php echo $lang['KEYWORDS'] ?>">
@@ -18,7 +18,9 @@ if(!defined('LANG'))
 		<![endif]-->
 
 
-		<title><?=$lang['TITLE'];?></title>
+		<title>
+			XXXX
+		</title>
 	</head>
 		<body>
 	<div id="flags">

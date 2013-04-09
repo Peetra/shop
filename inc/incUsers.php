@@ -33,20 +33,6 @@ $password = mysql_real_escape_string($password);
 
 echo $lang['REGISTER'];
 ?></h3>
-<?$zip_length = strlen($zip);
-	if ($zip_length != 5 && (isset($_POST['zip'])))
-		echo '<span style="color:red">' . $lang['ZIP_ERROR'] . '</span>';
-        
-    $email_length = strlen($email);
-    if ($email_length <= 6)
-    {
-		echo $lang['EMAIL']  .  '  '  .  $email  .   '  '  .   $lang['EMAIL_TO_SHORT'];
-	}
-    if (strpos($email,"@" OR ".")==FALSE)
-	{
-		echo $lang['EMAIL_REQUIRED_CHAR'];
-	}
- ?>
 <form method="post" action="">
   <table>
     <tr>
@@ -80,9 +66,24 @@ echo $lang['REGISTER'];
   </table>
 </form>
 <?php
-if ($fname != '' && $zip_length == 5)
+$zip_length = strlen($zip);
+$email_length = strlen($email);
+if ($fname != '' && $zip_length == 5 && $email_length <= 6) // if everything is in order, lets send it into the database
 {
 	$sql = "INSERT INTO {$prefix}customers (uID, fname, lname, street, zip, city, phone, email, password)
                         VALUES ('', '$fname', '$lname', '$street', '$zip', '$city', '$phone', '$email', '$password')";
-                        mysql_query($sql);
+                        mysql_query($sql
+	echo $lang['REGISTER_THANKS'];
+}
+// Here I would like to put in the confirmation thing, so that an emaiö is sent out to the user in order to confirm the registration
+
+// ..otherwise we'll give some error message
+else
+{
+	if ($zip_length != 5 && isset($_POST['zip']))
+		echo '<span style="color:red">' . $lang['ZIP_ERROR'] . '</span><br />';
+        if ($email_length <= 6 && isset($_POST['email']))
+		echo $lang['EMAIL']  .  '  '  .  $email  .   '  '  .   $lang['EMAIL_TO_SHORT'];
+	if ((strpos($email,"@") === FALSE || strpos($email,".") === FALSE) && isset($_POST['email'])) // strpos — Find the position of the first occurrence of a substring in a string
+		echo $lang['EMAIL_REQUIRED_CHAR'];
 }
